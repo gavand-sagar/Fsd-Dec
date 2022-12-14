@@ -6,5 +6,15 @@ Changes will happen
 Good
 let me in
 hello
+Mark here
+
+nghng
 HELLO !
+<<<<<<< HEAD
 Hi
+=======
+practice session :D
+umm seems like we having fun :D
+hello
+
+>>>>>>> origin/main
