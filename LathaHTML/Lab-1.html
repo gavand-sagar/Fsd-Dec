@@ -9,7 +9,7 @@
         .main-container
         {
             background-color: #f5f4f4;
-            padding: 25px;
+            padding: 1px;
             font-family: sans-serif
         }
         .sub-container
@@ -35,7 +35,7 @@
         {
             width: fit-content;
             height: 50px;
-            background: linear-gradient(to bottom left, #f974cd,purple);
+            background: linear-gradient(to top right, #f974cd,rgba(229, 144, 229, 0.451),rgba(242, 242, 24, 0.242));
             padding: 10px;
             color:white;
             border-radius: 30px;
@@ -47,40 +47,106 @@
         .dark-button
         {
             width: fit-content;
-            height: 50px;
             background : black;
             padding: 10px;
             color:white;
             border-radius: 5px;
             font-size: 20px;
             margin-bottom: 20px;
+            margin-left: 10px;
             border: none;
+        }
+
+        .purple-button
+        {
+            width: fit-content;
+            height: 50px;
+            background: linear-gradient(to bottom left, purple,rgb(243, 212, 243));
+            padding: 10px;
+            color:white;
+            border-radius: 30px;
+            font-size: 20px;
+            margin-bottom: 20px;
+            border: none;
+        }
+
+        .horizontalLine
+        {
+            background-color: #8bea8b;
+            height: 5px;
+        }
+
+        .top-container
+        {
+            margin: 25px;
+        }
+        .bottom-container
+        {
+            margin: 25px;
+        }
+
+        .left-container
+        {
+            display: inline-block;
+            float: left;
+            width: 20%;
+            height:auto;
+            border-right: 2px solid grey;
+        }
+        .right-container
+        {
+            width: 75%;
+            display: inline-block;
+            margin-left: 30px;
         }
     </style>
 </head>
 <body>
     <div class="main-container">
-        <button type="button" class="dark-button">Home</button>
-        <button type="button" class="pink-button">Javascript</button>
-        <div class="sub-container">
-            <h3>This was funny</h3>
-            <p>by <span class="name">Homer Simpson</span> | <span class="course">Node.js</span> | Posted on Thursday Nov 28th 2019</p>
-            <p>So, I saw this video in youtube and this guy was teaching something called "Naht datt jee ESS". I mean if you to teach French, do it properly!</p>
+       <div class="top-container">
+            <h3 style="float: left; width:30%">Tiny Thoughts</h3>
+            <button type="button" class="dark-button">Home</button>
+            <button type="button" class="dark-button">New Post</button>
+            <button type="button" class="dark-button" style="float: right;">Sign In</button>
+            <button type="button" class="dark-button" style="float: right;">Sign Up</button>
         </div>
-        <div class="sub-container">
-            <h3>Java, eh?</h3>
-            <p>by <span class="name">Homer Simpson</span> | <span class="course">Java</span> | Posted on Thursday Nov 28th 2019</p>
-            <p>Doh!</p>
+        <div class="horizontalLine">
         </div>
-        <div class="sub-container">
-            <h3>Why React??</h3>
-            <p>by <span class="name">Homer Simpson</span> | <span class="course">React</span> | Posted on Thursday Nov 28th 2019</p>
-            <p>Why do you have React to everything?. I mean all I said was the reactor was gonna blow. Whats the fuss about?.</p>
-        </div>
-        <div class="sub-container">
-            <h3>Thoughts on Javascript</h3>
-            <p>by <span class="name">Homer Simpson</span> | <span class="course">Javascript</span> | Posted on Thursday Nov 28th 2019</p>
-            <p>I love a hot cuppa Java with my donuts. When I'm reading my script for my new movie. Java and script, mmmmm, delicious!</p>
+        <div class="bottom-container">
+            <div class="left-container">
+                <button type="button" class="pink-button">Javascript</button>
+                <button type="button" class="pink-button">React</button>
+                <button type="button" class="pink-button">Node.Js</button>
+                <button type="button" class="pink-button">HTML5</button>
+                <button type="button" class="pink-button">CSS3</button>
+                <button type="button" class="pink-button">Phyton</button>
+                <button type="button" class="purple-button">All Posts</button>
+            </div>
+            <div class="right-container">
+                <div class="sub-container">
+                    <h3>This was funny</h3>
+                    <p>by <span class="name">Homer Simpson</span> | <span class="course">Node.js</span> | Posted on Thursday Nov 28th 2019</p>
+                    <p>So, I saw this video in youtube and this guy was teaching something called "Naht datt jee ESS". I mean if you to teach French, do it properly!</p>
+                </div>
+                <div class="sub-container">
+                    <h3>Java, eh?</h3>
+                    <p>by <span class="name">Homer Simpson</span> | <span class="course">Java</span> | Posted on Thursday Nov 28th 2019</p>
+                    <p>Doh!</p>
+                </div>
+                <div class="sub-container">
+                    <h3>Why React??</h3>
+                    <p>by <span class="name">Homer Simpson</span> | <span class="course">React</span> | Posted on Thursday Nov 28th 2019</p>
+                    <p>Why do you have React to everything?. I mean all I said was the reactor was gonna blow. Whats the fuss about?.</p>
+                </div>
+                <div class="sub-container">
+                    <h3>Thoughts on Javascript</h3>
+                    <p>by <span class="name">Homer Simpson</span> | <span class="course">Javascript</span> | Posted on Thursday Nov 28th 2019</p>
+                    <p>I love a hot cuppa Java with my donuts. When I'm reading my script for my new movie. Java and script, mmmmm, delicious!</p>
+                
+                
+                
+                </div>
+            </div>
         </div>
     </div>
 </body>
