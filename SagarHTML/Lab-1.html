@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+
+        div{
+            box-sizing: border-box;
+            vertical-align: top;
+        }
+
         .heading-container{
             background-color: #164A4E;
             border-radius: 10px;
@@ -21,18 +27,33 @@
         }
 
         .circle{
-            height: 150px;
-            width:150px;
-            background-color: #164A4E;
+            height: 250px;
+            width:250px;
+            background: linear-gradient(to top left,red,yellow);
             margin: 20px;
-            display: inline-block;
             border-radius: 50%;
+            padding: 5px;
+            box-sizing: border-box;
+
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .text{
+            border-left: 1px solid;
+            padding-left:10px;
         }
 
         .free{
             background-color:#0f333695;
             width:fit-content;
             padding:5px;
+        }
+
+        .circles-container{
+            text-align: center;
         }
     </style>
 </head>
@@ -51,9 +72,11 @@
         </div>
     </div>
     <div class="circles-container">
-        <div class="circle">This is a text</div>
-        <div class="circle">This is a text</div>
-        <div class="circle">This is a text</div>
+        <div class="circle">This </div>
+        <div class="circle">This is a text </div>
+        <div class="circle">This is a  asdfjk <br>jasdf kjklsad <br>jfkjasdklf jklsdaj<br> kjkksjk <br>text sadf sa </div>
+
+        <span class="circle">Click me</span>
     </div>
 </body>
 </html>
