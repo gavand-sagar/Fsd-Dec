@@ -40,15 +40,14 @@
             display: inline-block;
             border-radius: 50% 50%;
             text-align: center;
-           
-            
-        }
-
-        
+           }
         .align-text {
             line-height: normal;
             display: inline-block;
             vertical-align: middle;  
+        }
+        .dialog{
+            position: relative; 
         }
         
        
@@ -59,9 +58,9 @@
         <div class="free">Free</div>
         <h1>Online Code Editor</h1>
         <p class="text">Beginner</p>
-        <br>
+      
         <p class="text">20 Hours</p>
-        <br>
+        
         <p class="text">Skills</p>
         
         <div class="buttons-container">
@@ -71,10 +70,14 @@
             <span class="button">Web Development</span>
         </div>
     </div>
-    <div class="circles-container">
-        <div class="circle"><div class="align-text">This <br> is a dummy text. </div> </div>
+    <div class="circles-container"> 
         <div class="circle"><div class="align-text">This <br> is a dummy text. </div></div>
         <div class="circle"><div class="align-text">This <br> is a dummy text. </div></div>
+
+         <!--You can add different elements as well it will work-->
+        <div class="circle"><div class="align-text"><button>Click Me!</button> </div> </div>
+        <div class="circle"><div class="align-text"><dialog class="dialog" open >This is Dialog box.</dialog> </div></div> 
+      
     </div>
 </body>
 </html>
