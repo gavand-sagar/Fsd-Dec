@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        div{
+            box-sizing: border-box;
+            vertical-align: top;
+        }
         .heading-container{
             background-color: #164A4E;
             border-radius: 10px;
@@ -24,10 +28,15 @@
         .circle{
             height: 150px;
             width:150px;
-            background-color: #164A4E;
+            background: linear-gradient(to bottom right, #164A4E,#55b5bc );
+            padding: 5px;
             margin: 20px;
-            display: inline-block;
             border-radius: 50%;
+            box-sizing:border-box;
+
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .free{
@@ -35,6 +44,12 @@
             width:fit-content;
             padding:5px;
         }
+        .text{
+            border-right: 1px solid;
+
+        }
+          
+        
     </style>
 </head>
 <body>
