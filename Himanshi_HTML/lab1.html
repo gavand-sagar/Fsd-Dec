@@ -21,12 +21,16 @@
         }
 
         .circle{
-            height: 150px;
-            width:150px;
+            height: 200px;
+            width: 200px;
+            line-height: 200px;
             background-color: #164A4E;
             margin: 20px;
             display: inline-block;
-            border-radius: 50%;
+            border-radius: 50% 50%;
+            text-align: center;
+           
+            
         }
 
         .free{
@@ -34,6 +38,25 @@
             width:fit-content;
             padding:5px;
         }
+        p {
+            line-height: normal;
+            display: inline-block;
+            vertical-align: middle;  
+        }
+
+
+       /* .cir{
+           
+           width:fit-content;
+           border-width: 50px; 
+           border-color: black ; 
+           border: solid; 
+          
+
+        .cir{
+            padding: 50% 50%;
+            margin: 50% 50% ;
+        }*/
     </style>
 </head>
 <body>
@@ -51,9 +74,9 @@
         </div>
     </div>
     <div class="circles-container">
-        <div class="circle">This is a text</div>
-        <div class="circle">This is a text</div>
-        <div class="circle">This is a text</div>
+        <div class="circle"><p>This is a dummy Text.</p> </div>
+        <div class="circle"><p>This is a dummy Text.</p></div>
+        <div class="circle"><p>This is a dummy Text.</p></div>
     </div>
 </body>
 </html>
