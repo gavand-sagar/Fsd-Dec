@@ -50,13 +50,14 @@
         .left-container{
             width: 200px;
             border-right: #e5e2e3 solid;
+            display: inline-block;
             
         }
         .left-button{
             background: linear-gradient(to top right, #a70c89,#f12c5c);
             color: white;
             border-radius: 20px;
-            margin: 2px;
+            margin: 5px;
             padding: 10px;
             display: inline-block;
         }
@@ -68,23 +69,25 @@
             padding: 10px;
             display: inline-block;
         }
-        .container{
+        .post-container{
         width: 650px;
-        height: 150px;
         background-color: white;
         padding: 20px;
         margin: 30px;
         font-family: Arial;
-      }
-      .stamp{
-        color: gray;
-      }
-      .name{
-        color: blue;
-      }
-      .post{
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      }
+        display: block;
+        justify-content: center;
+        align-items: center;
+        }
+        .stamp{
+            color: gray;
+        }
+        .name{
+            color: blue;
+        }
+        .post{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
     </style>
 </head>
 <body>
@@ -116,7 +119,7 @@
             <span class="left-button-allposts">All Posts</span>
         </div>
         <div class="blogpost">
-            <div class="container">
+            <div class="post-container">
                 <h2>This was funny</h2>
                 <div class="stamp">by<span class="name"> Homer Simpson</span> |<span class="name"> Node.js</span> | Posted on Thursday, November 28th 2019, 4:36:09 pm</div>
                 <p class="post">
@@ -125,21 +128,21 @@
                 it properly!
                 </p>
             </div>
-            <div class="container">
+            <div class="post-container">
             <h2>Java, eh?</h2>
             <div class="stamp">by<span class="name"> Homer Simpson</span> |<span class="name"> Java</span> | Posted on Thursday, November 28th 2019, 4:34:43 pm</div>
                 <p class="post">
                 Doh!
                 </p>
             </div>
-            <div class="container">
+            <div class="post-container">
             <h2>Why React??</h2>
             <div class="stamp">by<span class="name"> Homer Simpson</span> |<span class="name"> React</span> | Posted on Thursday, November 28th 2019, 4:34:06 pm</div>
                 <p class="post">
                 Why do you have to React to everything? I mean all i said was that the reactor was gonna blow. What's the fuss about?
                 </p>
             </div>
-            <div class="container">
+            <div class="post-container">
             <h2>Thoughts on JavaScript</h2>
             <div class="stamp">by<span class="name"> Homer Simpson</span> |<span class="name"> JavaScript</span> | Posted on Thursday, November 28th 2019, 4:31:45 pm</div>
                 <p class="post">
