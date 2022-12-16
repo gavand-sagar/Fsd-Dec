@@ -1,15 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Position & CSS Selectors</title>
     <style>
-        
+      .position-1 {
+        background-color: red;
+        position: static;
+      }
+      .position-2 {
+        background-color: blue;
+        position: static;
+      }
+      .position-3 {
+        background-color: green;
+        position: static;
+      }
+      #id-example{
+        color: blueviolet;
+      }
+      div>ol>li{
+        color: brown;
+      }
+      [type="number"][placeholder="type number here"]{
+        color:grey;
+      }
     </style>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <p>types of positions</p>
+    <ol>
+        <li>static -- no change</li>
+        <li>relative -- wrt itself</li>
+        <li>fixed -- wrt the document</li>
+        <li>absolute -- wrt the parent</li>
+        <li>sticky --  initially static but wrt the document</li>
+    </ol>
+    <div class="position-1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius tempora
+        magnam ipsam illo quasi optio tempore voluptates omnis assumenda
+        provident.
+    </div>
+    <div class="position-2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius tempora
+        magnam ipsam illo quasi optio tempore voluptates omnis assumenda
+        provident.
+    </div>
+    <div class="position-3">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius tempora
+        magnam ipsam illo quasi optio tempore voluptates omnis assumenda
+        provident.
+    </div>
+    <div class="css-selectors">
+        <p>priority(least to most) of css-selectors</p>
+        <ol>
+            <li>tag (use . in style)</li>
+            <li>hierarchy</li>
+            <li>class (use . in style)</li>
+            <li id="id-example">id (use # in style)</li>
+            <li>style (css properties wont be considered) **not recommended</li>
+        </ol>
+        <p>hierarchy based css-selectors</p>
+        <ol>
+            <li>child (show directory - div>ol>li)</li>
+            <li>attribute global change: <input type="number" placeholder="type number here"></li>
+        </ol>
+    </div>
+  </body>
 </html>

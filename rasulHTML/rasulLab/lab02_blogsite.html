@@ -14,7 +14,13 @@
             box-sizing: border-box;
         }
         .top-container{
+            background-color: #f4f4f5;
             padding: 30px;
+            border-bottom: #16d18a solid;
+            border-width: 5px;
+            position: sticky;
+            top:0px;
+                        
         }
         .top-header{
             font-size: xx-large;
@@ -29,7 +35,7 @@
             width: fit-content;
         }
         .signin-container{
-            margin-left: 400px
+            margin-left: 300px;
         }
         .top-right-button{
             background:#010100;
@@ -39,29 +45,29 @@
             padding: 15px;
             width: fit-content;
         }
-        hr{
-            height: 5px;
-            background-color: #16d18a;
-            border: none;
-        }
         .bottom-container{
             display: block;
+            display: inline-block;
         }
         .left-container{
             width: 200px;
             border-right: #e5e2e3 solid;
             display: inline-block;
+            vertical-align: top;
+            
             
         }
-        .left-button{
+        button{
             background: linear-gradient(to top right, #a70c89,#f12c5c);
             color: white;
             border-radius: 20px;
             margin: 5px;
             padding: 10px;
             display: inline-block;
+            border: 0;
+            
         }
-        .left-button-allposts{
+        .button-allposts{
             background: linear-gradient(to top right, #b233db,#4bb6f9);
             color: white;
             border-radius: 20px;
@@ -69,15 +75,18 @@
             padding: 10px;
             display: inline-block;
         }
+        .blogpost{
+            display: inline-block;
+        }
         .post-container{
-        width: 650px;
-        background-color: white;
-        padding: 20px;
-        margin: 30px;
-        font-family: Arial;
-        display: block;
-        justify-content: center;
-        align-items: center;
+            width: 650px;
+            background-color: white;
+            padding: 20px;
+            margin: 30px;
+            font-family: Arial;
+            display: block;
+            justify-content: center;
+            align-items: center;
         }
         .stamp{
             color: gray;
@@ -102,21 +111,20 @@
             <span class="top-right-button">Signup</span>
         </span>
     </div>
-    <hr>
     <div class="bottom-container">
         <div class="left-container">
-            <span class="left-button">JavaScript</span>
-            <span class="left-button">React</span>
-            <span class="left-button">Node.js</span>
-            <span class="left-button">React Router</span>
-            <span class="left-button">Redux</span>
-            <span class="left-button">GraphQL</span>
-            <span class="left-button">HTML5</span>
-            <span class="left-button">CSS3</span>
-            <span class="left-button">Java</span>
-            <span class="left-button">Python</span>
-            <span class="left-button">Movies</span>
-            <span class="left-button-allposts">All Posts</span>
+            <button>JavaScript</button>
+            <button>React</button>
+            <button>Node.js</button>
+            <button>React Router</button>
+            <button>Redux</button>
+            <button>GraphQL</button>
+            <button>HTML5</button>
+            <button>CSS3</button>
+            <button>Java</button>
+            <button>Python</button>
+            <button>Movies</button>
+            <button class="button-allposts">All Posts</button>
         </div>
         <div class="blogpost">
             <div class="post-container">
