@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab2 - blogsite</title>
+    <style>
+        body{
+            background-color: #f4f4f5;
+            font-family: Arial;
+        }
+        div{
+            box-sizing: border-box;
+        }
+        .top-container{
+            padding: 30px;
+        }
+        .top-header{
+            font-size: xx-large;
+            margin-right: 150px;
+        }
+        .top-button{
+            background:#010100;
+            color: white;
+            border-color: #f4f4f5;
+            border-radius: 5px;
+            padding: 15px;
+            width: fit-content;
+        }
+        .signin-container{
+            margin-left: 400px
+        }
+        .top-right-button{
+            background:#010100;
+            color: white;
+            border-color: #f4f4f5;
+            border-radius: 5px;
+            padding: 15px;
+            width: fit-content;
+        }
+        hr{
+            height: 5px;
+            background-color: #16d18a;
+            border: none;
+        }
+        .bottom-container{
+            display: block;
+        }
+        .left-container{
+            width: 200px;
+            border-right: #e5e2e3 solid;
+            
+        }
+        .left-button{
+            background: linear-gradient(to top right, #a70c89,#f12c5c);
+            color: white;
+            border-radius: 20px;
+            margin: 2px;
+            padding: 10px;
+            display: inline-block;
+        }
+        .left-button-allposts{
+            background: linear-gradient(to top right, #b233db,#4bb6f9);
+            color: white;
+            border-radius: 20px;
+            border-width: 1px;
+            padding: 10px;
+            display: inline-block;
+        }
+        .container{
+        width: 650px;
+        height: 150px;
+        background-color: white;
+        padding: 20px;
+        margin: 30px;
+        font-family: Arial;
+      }
+      .stamp{
+        color: gray;
+      }
+      .name{
+        color: blue;
+      }
+      .post{
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+    </style>
+</head>
+<body>
+    <div class="top-container">
+        <span class="top-header"><b>TinyThoughts</b></span>
+        <span>
+            <span class="top-button">Home</span>
+            <span class="top-button">New Post</span>
+        </span>
+        <span class="signin-container">
+            <span class="top-right-button">Signin</span>
+            <span class="top-right-button">Signup</span>
+        </span>
+    </div>
+    <hr>
+    <div class="bottom-container">
+        <div class="left-container">
+            <span class="left-button">JavaScript</span>
+            <span class="left-button">React</span>
+            <span class="left-button">Node.js</span>
+            <span class="left-button">React Router</span>
+            <span class="left-button">Redux</span>
+            <span class="left-button">GraphQL</span>
+            <span class="left-button">HTML5</span>
+            <span class="left-button">CSS3</span>
+            <span class="left-button">Java</span>
+            <span class="left-button">Python</span>
+            <span class="left-button">Movies</span>
+            <span class="left-button-allposts">All Posts</span>
+        </div>
+        <div class="blogpost">
+            <div class="container">
+                <h2>This was funny</h2>
+                <div class="stamp">by<span class="name"> Homer Simpson</span> |<span class="name"> Node.js</span> | Posted on Thursday, November 28th 2019, 4:36:09 pm</div>
+                <p class="post">
+                So, I saw this video on Youtube and this guy was teaching somethng
+                called "Naahd Daaht Jee Esss". I mean, if you have to teach French, do
+                it properly!
+                </p>
+            </div>
+            <div class="container">
+            <h2>Java, eh?</h2>
+            <div class="stamp">by<span class="name"> Homer Simpson</span> |<span class="name"> Java</span> | Posted on Thursday, November 28th 2019, 4:34:43 pm</div>
+                <p class="post">
+                Doh!
+                </p>
+            </div>
+            <div class="container">
+            <h2>Why React??</h2>
+            <div class="stamp">by<span class="name"> Homer Simpson</span> |<span class="name"> React</span> | Posted on Thursday, November 28th 2019, 4:34:06 pm</div>
+                <p class="post">
+                Why do you have to React to everything? I mean all i said was that the reactor was gonna blow. What's the fuss about?
+                </p>
+            </div>
+            <div class="container">
+            <h2>Thoughts on JavaScript</h2>
+            <div class="stamp">by<span class="name"> Homer Simpson</span> |<span class="name"> JavaScript</span> | Posted on Thursday, November 28th 2019, 4:31:45 pm</div>
+                <p class="post">
+                I love a hot cuppa Java with my donuts. Particularly when I'm reading the script for my new movie. Java and Script, mmmm, delicious!
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
