@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .heading-container{
+            background-color: #164A4E;
+            border-radius: 10px;
+            padding:20px;
+            color:rgb(127, 237, 185);
+            font-family: Arial;
+        }
+
+        .free{
+            background-color:#0f333695;
+            width:fit-content;
+            padding:5px;
+        }
+
+        .button{
+            border: 1px solid;
+            border-radius: 3px;
+            padding:5px;
+            margin-right: 5px;
+        }
+        .circles-container{
+
+            text-align:center;
+        }
+
+        .circle{
+            height: 200px;
+            line-height: 200px; /* height == line-height to get the text in the center.*/
+            
+            width: 200px;
+            background: linear-gradient(to top left,rgba(27, 165, 165, 0.792), rgb(10, 83, 83) 70%);
+            margin: 20px;
+            display: inline-block;
+            border-radius: 50% 50%;
+            text-align: center;
+           }
+        .align-text {
+            line-height: normal;
+            display: inline-block;
+            vertical-align: middle;  
+        }
+        .dialog{
+            position: relative; 
+        }
+        
+       
+    </style>
+</head>
+<body>
+    <div class="heading-container">
+        <div class="free">Free</div>
+        <h1>Online Code Editor</h1>
+        <p class="text">Beginner</p>
+        <p class="text">20 Hours</p>     
+        <p class="text">Skills</p>
+        
+        <div class="buttons-container">
+            <span class="button">HTML</span>
+            <span class="button">CSS</span>
+            <span class="button">jQuery</span>
+            <span class="button">Web Development</span>
+        </div>
+    </div>
+    <div class="circles-container"> 
+        <div class="circle"><div class="align-text">This <br> is a dummy text. </div></div>
+        <div class="circle"><div class="align-text">This <br> is a dummy text. </div></div>
+
+         <!--You can add different elements as well-->
+        <div class="circle"><div class="align-text"><button>Click Me!</button> </div> </div>
+        <div class="circle"><div class="align-text"><dialog class="dialog" open >This is a Dialog box.</dialog> </div></div> 
+      
+    </div>
+</body>
+</html>
