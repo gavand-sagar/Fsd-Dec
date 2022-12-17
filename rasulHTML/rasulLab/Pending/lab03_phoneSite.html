@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab03 - 91 mobiles</title>
+    <style>
+        body{
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+        .nav-container{
+            background-color: rgba(25,24,24,255);
+            height: 60px;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .nav-buttons{
+            font-size: 15px;
+            color: white;
+            background-color: transparent;
+            border: 0;
+            cursor: pointer;
+        }
+        .search-container {
+			display: flex;
+			max-width: 300px;
+            height: 37px;
+			width: 100%;
+			background: white;
+			border-radius: 10px;
+			overflow: hidden;
+		}
+
+		.search-container input {
+			display: block;
+			flex: 1;
+			border: 0;
+			padding: 10px 15px;
+			background: transparent;
+			width: 100%;
+			overflow: hidden;
+		}
+
+		.search-container input:focus {
+			outline: none;
+		}
+
+		.search-container button {
+			border: 0;
+			padding: 10px 15px;
+			background: #aaa;
+			color: white;
+            cursor: pointer;
+		}
+        #search{
+            height: 20px;
+            width: 20px;
+        }
+        .selector-container{
+            margin: 20px;
+        }
+        .selector-header{
+            height: 40px;
+            width: 450px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .second-header{
+            color: rgba(242,127,63,255);
+        }
+        .card-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .card{
+            border: 1px rgba(231,230,230,255) solid;
+            height: 400px;
+            width: 300px;
+            margin: 10px;
+            position: relative;
+            display: block;
+            justify-content: center;
+            align-items: center;
+        }
+        .offer{
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+            color: white;
+            background-color: rgba(45,148,3,255);
+            text-align: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .offer-spec{
+            font-size: smaller;
+            margin: 0;
+        }
+        .card-button{
+            color: rgba(73,72,73,255);
+            background-color: rgba(231,230,230,255);
+            border: 0;
+            height: 40px;
+            width: 100%;
+            position: absolute;
+            bottom:0;
+            font-size: 17px;
+            cursor: pointer;
+        }
+        .phone-container{
+
+
+        }
+        h4{
+            text-align: center;
+        }
+        .phone{
+            text-align: center;
+        }
+        .price-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .price{
+            color:rgba(255,107,29,255) ;
+        }
+        .expected{
+            margin-left: 5px;
+            font-size: 12px;
+        }
+        .selector-right-button{
+            background-color: rgba(170, 170, 170, 0.342);
+            border-radius: 50%;
+            border:0;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 0;
+            cursor: pointer;
+        }
+        #chevron-right{
+            height: 50px;
+            width: 50px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav class="nav-container">
+        <img src="images/phonesite/91mobile_logo.gif" alt="91-mobiles-logo">
+        <button class="nav-buttons">Mobiles & More</button>
+        <button class="nav-buttons">Top 10</button>
+        <button class="nav-buttons">Compare</button>
+        <button class="nav-buttons">Upcoming Mobiles</button>
+        <div class="search-container">
+            <input type="text" placeholder="Search for products or brands" />
+            <button type="button">
+                <img src="images/phonesite/mag_glass_icon.png" alt="search" id="search">
+            </button>
+        </div>
+        <button class="nav-buttons">Login</button>
+    </nav>
+    <div class="selector-container">
+        <div class="selector-header">
+            <h2>Upcoming Mobiles</h2>
+            <p class="second-header">Upcoming Mobiles</p>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <div class="offer">
+                    91%<p class="offer-spec">SPEC SCORE</p>
+                </div>
+                <div class="phone">
+                    <img src="images/phonesite/k40.png" alt="Xiaomi Redmi K40">
+                    <h4>Xiaomi Redmi K40</h4>
+                    <div class="price-container">
+                        <h4 class="price">Rs. 22,490</h4>
+                        <p class="expected">(Expected)</p>
+                    </div>
+                </div>
+                <button class="card-button">View Details</button>
+            </div>
+            <div class="card">
+                <div class="offer">
+                    92%<p class="offer-spec">SPEC SCORE</p>
+                </div>
+                <div class="phone">
+                    <img src="images/phonesite/11 Pro.png" alt="Xiaomi Mi 11 Pro">
+                    <h4>Xiaomi Mi 11 Pro</h4>
+                    <div class="price-container">
+                        <h4 class="price">Rs. 55,390</h4>
+                        <p class="expected">(Expected)</p>
+                    </div>
+                </div>
+                <button class="card-button">View Details</button>
+            </div>
+            <div class="card">
+                <div class="phone">
+                    <img src="images/phonesite/F21 Pro.png" alt="OPPO F21 Pro">
+                    <h4>OPPO F21 Pro</h4>
+                    <div class="price-container">
+                        <h4 class="price">Rs. 25,990</h4>
+                        <p class="expected">(Expected)</p>
+                    </div>
+                </div>
+                <button class="card-button">View Details</button>
+            </div>
+            <div class="card">
+                <div class="offer">
+                    94%<p class="offer-spec">SPEC SCORE</p>
+                </div>
+                <div class="phone">
+                    <img src="images/phonesite/Mix 4.png" alt="Xiaomi Mi Mix 4">
+                    <h4>Xiaomi Mi Mix 4</h4>
+                    <div class="price-container">
+                        <h4 class="price">Rs. 57,490</h4>
+                        <p class="expected">(Expected)</p>
+                    </div>
+                </div>
+                <button class="card-button">View Details</button>
+            </div>
+            <button class="selector-right-button">
+                <img src="images/phonesite/chevron_right.png" alt="chevron-right" id="chevron-right">
+            </button>
+        </div>
+    </div>
+    <div class="selector-container">
+        <div class="selector-header">
+            <h2>Latest and Popular Mobiles</h2>
+            <p class="second-header">All Mobiles</p>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <div class="offer">
+                    98%<p class="offer-spec">SPEC SCORE</p>
+                </div>
+                <div class="phone">
+                    <img src="images/phonesite/iphone 13.png" alt="Apple iPhone 13">
+                    <h4>Apple iPhone 13</h4>
+                    <div class="price-container">
+                        <h4 class="price">Rs. 55,590</h4>
+                        <p class="expected">(Expected)</p>
+                    </div>
+                </div>
+                <button class="card-button">View Details</button>
+            </div>
+            <div class="card">
+                <div class="offer">
+                    99%<p class="offer-spec">SPEC SCORE</p>
+                </div>
+                <div class="phone">
+                    <img src="images/phonesite/iphone 13 pro max.png" alt="Apple iPhone 13 Pro Max">
+                    <h4>Apple iPhone 13 Pro Max</h4>
+                    <div class="price-container">
+                        <h4 class="price">Rs. 75,490</h4>
+                        <p class="expected">(Expected)</p>
+                    </div>
+                </div>
+                <button class="card-button">View Details</button>
+            </div>
+            <div class="card">
+                <div class="offer">
+                    87%<p class="offer-spec">SPEC SCORE</p>
+                </div>
+                <div class="phone">
+                    <img src="images/phonesite/xiaomi 11 lite.png" alt="Xiaomi 11 Lite NE 5G">
+                    <h4>Xiaomi 11 Lite NE 5G</h4>
+                    <div class="price-container">
+                        <h4 class="price">Rs. 26,990</h4>
+                        <p class="expected">(Expected)</p>
+                    </div>
+                </div>
+                <button class="card-button">View Details</button>
+            </div>
+            <div class="card">
+                <div class="offer">
+                    91%<p class="offer-spec">SPEC SCORE</p>
+                </div>
+                <div class="phone">
+                    <img src="images/phonesite/vivo x70 pro.png" alt="Vivo X70 Pro">
+                    <h4>Vivo X70 Pro</h4>
+                    <div class="price-container">
+                        <h4 class="price">Rs. 22,495</h4>
+                        <p class="expected">(Expected)</p>
+                    </div>
+                </div>
+                <button class="card-button">View Details</button>
+            </div>
+            <button class="selector-right-button">
+                <img src="images/phonesite/chevron_right.png" alt="chevron-right" id="chevron-right">
+            </button>
+        </div>
+    </div>
+</body>
+</html>
