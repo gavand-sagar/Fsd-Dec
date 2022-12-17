@@ -6,13 +6,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .container{
+        body {
             background-color:rgba(224, 221, 221, 0.542);
+            /* margin: 0px; */
+        }
+        .logo-container{
+            height: auto; 
+            width: 150px;  
+            display: inline-block;
+            margin-left: 30px;
+        }
+        .header-container{
+            display: inline-block;
+            width: 1150px;
+            /* border: solid; */
+            padding-left: 70px;
+            height: auto;
+        }
+        .button-header{
+           
+           background-color: black;
+           color: white;
+            height: 40px;
+            width: 100px;
+            border-radius: 10px;
+            font-size: medium;
+        }
+        .body-container{
+            margin-left: 10px;
+            vertical-align: top;
+            /* border: solid; */
+            width: 1500px;
+            height:auto;
+        }
+        .sideBar-container{
+            border-right: solid  rgb(220, 211, 211);
+            border-width: 2px;
+            vertical-align: top;
+            width: 200px;
+            height: auto;
+            display: inline-block;
+            margin: 10px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .button-sideBar{
+            margin: 8px;
+           height: 35px;
+            border-radius: 30px;
+            min-width: 80px;
+            padding: 10px;
+            background: linear-gradient(to top right, rgb(218, 53, 53), rgb(181, 2, 145) );
+            border: 0px;
+            color: white;
+        }
+        .button-sidebarBlue{
+            margin: 8px;
+           height: 35px;
+            border-radius: 30px;
+            min-width: 80px;
+            padding: 10px;
+            background: linear-gradient(to top right, rgb(255, 0, 170), rgb(3, 125, 186) );
+            border: 0px;
+            color: white;            
+        }
+        .parent-container{
+            /* border: solid; */
+            width:auto;
+            display: inline-block;
+            height: auto;
+            
+            
         }
         .child-container{
             background-color:whitesmoke;
             padding: 20px;
             margin: 50px 50px;
+            margin-left: 0px;
+            margin-top: 10px; 
+            width: 1000px;
             font-family: Arial, Helvetica, sans-serif;
             border-bottom: 20px;
             border-radius: 7px;
@@ -28,72 +100,112 @@
             font-family: Arial, Helvetica, sans-serif;
             margin-top: 30px;
         }
-
+        
+        
         
       
         </style>
 </head>
-<body class="container">
-   
-        <div class="child-container">
-            <h3>This was funny</h3>
-            <span class="text_grey">
-                by
-            <span class="text_blue">
-                Homer Sympson
-            </span> 
-            <b>|</b>
-            <span class="text_blue">
-                Node.js
-            </span>
-            <b>|</b>
-            Posted on Thursday, November 28th 2019, 4:36:09 pm
-            </span>
-            <p class="text">So I saw this video on Youtube and this guy was teaching something called "Naahd Daaht Jee Esss". I mean, if you have to teach French. Do it properly!</p>
-         </div>
-        <div class="child-container">
-            <h3>Java, eh?</h3>
-            <span class="text_grey">by
-            <span class="text_blue">
-                Homer Sympson
-            </span> 
-            <b>|</b> 
-            <span class="text_blue">
-                Java
-            </span>
-            <b>|</b> Posted on Thursday, November 28th 2019, 4:36:09 pm
-            </span>
-            <p class="text">Doh!</p>
+<body>
+    <!-- <div style="height: 100px; width: auto; border: solid;"> -->
+        <div class="logo-container">
+            <h2>TinyThoughts</h2>
         </div>
-
-        <div class="child-container">
-            <h3>Why React??</h3>
-            <span class="text_grey">by
-            <span class="text_blue">
-                Homer Sympson
-            </span> 
-            <b>|</b>
-            <span class="text_blue">
-                React
-            </span>
-            <b>|</b> Posted on Thursday, November 28th 2019, 4:36:09 pm
-            </span>
-            <p class="text">Why do you have to React to everything? I mean all I said was that the reactor was gonna blow. Whats the fuss about?</p> 
+    <div class="header-container">
+        <div style="display: inline-block;">
+            <button class="button-header">Home</button>
+            <button class="button-header">New Post</button>
         </div>
+        <div style="float: right;">
+            <button class="button-header">Signin</button>
+            <button class="button-header">Signup</button>
+        </div>
+    </div>
+        <hr style=" color: rgb(10, 214, 57); border: solid;">
+        <div class="body-container">
+            <div class="sideBar-container">
+                <button class="button-sideBar">JavaScript</button>
+                <button class="button-sideBar" >React</button>
+                <br>
+                <button class="button-sideBar">Node.js</button>
+                <br>
+                <button class="button-sideBar">React Router</button>
+                <br>
+                <button class="button-sideBar">Redux</button>
+                <button class="button-sideBar">Graph Ql</button>
+                <br>
+                <button class="button-sideBar">HTML5</button>
+                <button class="button-sideBar">CSS3</button>
+                <br>
+                <button class="button-sideBar">Java</button>
+                <button class="button-sideBar">Python</button>
+                <br>
+                <button class="button-sideBar">Movies</button>
+                <button class="button-sidebarBlue">All Posts</button>
+            </div>
+    
+            <div class="parent-container">
+                <div class="child-container">
+                    <h3>This was funny</h3>
+                    <span class="text_grey">
+                        by
+                    <span class="text_blue">
+                        Homer Sympson
+                    </span> 
+                    <b>|</b>
+                    <span class="text_blue">
+                        Node.js
+                    </span>
+                    <b>|</b>
+                    Posted on Thursday, November 28th 2019, 4:36:09 pm
+                    </span>
+                    <p class="text">So I saw this video on Youtube and this guy was teaching something called "Naahd Daaht Jee Esss". I mean, if you have to teach French. Do it properly!</p>
+                </div>
+                <div class="child-container">
+                    <h3>Java, eh?</h3>
+                    <span class="text_grey">by
+                    <span class="text_blue">
+                        Homer Sympson
+                    </span> 
+                    <b>|</b> 
+                    <span class="text_blue">
+                        Java
+                    </span>
+                    <b>|</b> Posted on Thursday, November 28th 2019, 4:36:09 pm
+                    </span>
+                    <p class="text">Doh!</p>
+                </div>
 
-        <div class="child-container">
-            <h3>Thouths on JavaScript</h3>
-            <span class="text_grey">by
-            <span class="text_blue">
-                Homer Sympson
-            </span> 
-            <b>|</b>
-            <span class="text_blue">
-                JavaScript
-            </span>
-             <b>|</b> Posted on Thursday, November 28th 2019, 4:36:09 pm
-            </span>
-            <p class="text">I love a hot cuppa Java with my donuts. Particulary when I'm reading the script for my new movie. Java and Script, mmm, delisous!</p>  
+                <div class="child-container">
+                    <h3>Why React??</h3>
+                    <span class="text_grey">by
+                    <span class="text_blue">
+                        Homer Sympson
+                    </span> 
+                    <b>|</b>
+                    <span class="text_blue">
+                        React
+                    </span>
+                    <b>|</b> Posted on Thursday, November 28th 2019, 4:36:09 pm
+                    </span>
+                    <p class="text">Why do you have to React to everything? I mean all I said was that the reactor was gonna blow. Whats the fuss about?</p> 
+                </div>
+
+                <div class="child-container">
+                    <h3>Thouths on JavaScript</h3>
+                    <span class="text_grey">by
+                    <span class="text_blue">
+                        Homer Sympson
+                    </span> 
+                    <b>|</b>
+                    <span class="text_blue">
+                        JavaScript
+                    </span>
+                    <b>|</b> Posted on Thursday, November 28th 2019, 4:36:09 pm
+                    </span>
+                    <p class="text">I love a hot cuppa Java with my donuts. Particulary when I'm reading the script for my new movie. Java and Script, mmm, delisous!</p>  
+                </div>
+            </div>
         </div>
     
 </body>
