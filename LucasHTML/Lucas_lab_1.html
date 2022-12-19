@@ -7,8 +7,6 @@
     <title>Lucas Practice 01</title>
     <style>
         .wrap_container {
-            background-color: rgb(233, 222, 231);
-            padding: 20px 20px 20px 20px;
         }
 
         .main_container{
@@ -85,9 +83,9 @@
         }
 
         .top_hr {
-            border: 1px solid green;
+            border: 1.5px solid rgb(192, 154, 68);
             border-radius: 1px;
-            margin: 20px 0 20px 0;
+            margin: 10px 0 10px 0;
         }
 
         .left_sidebar
@@ -95,7 +93,7 @@
             display: inline-block;
             width: 300px;
             height: auto;
-            border-right: #1f99c9 solid 3px;
+            border-right: #425259 solid 3px;
             vertical-align: top;
             margin-right: 20px;
             margin-bottom: 20px;
@@ -136,67 +134,96 @@
             vertical-align: top;
         }
         
+        .header_area {
+            position: sticky;
+            top: 0;
+            background-color: #89c4d4;
+            padding: 20px;
+        }
+
+        .body_area {
+            background-color: #dab0cd;
+            padding: 20px;
+        }
+
+        .footer_area {
+            text-align: center;
+            font-weight: 800;     
+            padding: 10px;       
+        }
+        
     </style>
 </head>
 <body>
 
     <div class="wrap_container">
 
-        <div class="headline_text">Lucas Practice 01</div>
+        <div class="header_area">
+            <div class="headline_text">Lucas Practice 01</div>
 
-        <div class="top_menu">
-            <a href="#"><span class="top_menu_button">Menu</span></a>
-            <a href="#"><span class="top_menu_button">New Post</span></a>
+            <div class="top_menu">
+                <a href="#"><span class="top_menu_button">Menu</span></a>
+                <a href="#"><span class="top_menu_button">New Post</span></a>
+            </div>
+
+            <div class="signin_signup">
+                <a href="#"><span class="signin">Sign In</span></a>
+                <a href="#"><span class="signup">Sign Up</span></a>
+            </div>
         </div>
 
-        <div class="signin_signup">
-            <a href="#"><span class="signin">Sign In</span></a>
-            <a href="#"><span class="signup">Sign Up</span></a>
-        </div>
+        
 
-        <hr class="top_hr">
+        <div class="body_area">
 
-        <div class="left_sidebar">
-            <span class="button_1">JavaScript</span>
-            <span class="button_1">React</span>
-            <span class="button_1">Node.js</span>
-            <span class="button_1">React Router</span>
-            <span class="button_1">JavaScript</span>
-            <span class="button_1">React</span>
-            <span class="button_1">Node.js</span>
-            <span class="button_1">React Router</span>
-            <span class="button_all_posts">All Posts</span>
-        </div>
+            <hr class="top_hr">
 
-        <div class="right_sidebar">
-            <div class="main_container">
-                <h2>Lucas Practice 1</h2>
-                <div class="details">by <span class="author_1">Homer Simpson</span> | <span class="language_name">Node.js</span> | Posted on Thursday, November 28th 2019, 4:36:09pm</div>
-                <p class="para_1">So, I saw this video on YouTube and this guy was teaching something called "Naahd Daaht Jee Esss". I mean, if you have to teach French, do it properly!</p>
+            <div class="left_sidebar">
+                <span class="button_1">JavaScript</span>
+                <span class="button_1">React</span>
+                <span class="button_1">Node.js</span>
+                <span class="button_1">React Router</span>
+                <span class="button_1">JavaScript</span>
+                <span class="button_1">React</span>
+                <span class="button_1">Node.js</span>
+                <span class="button_1">React Router</span>
+                <span class="button_all_posts">All Posts</span>
             </div>
     
-            <div class="main_container">
-                <h2>Lucas Practice 2</h2>
-                <div class="details">by <span class="author_1">Homer Simpson</span> | <span class="language_name">Node.js</span> | Posted on Thursday, November 28th 2019, 4:36:09pm</div>
-                <p class="para_1">So, I saw this video on YouTube and this guy was teaching something called "Naahd Daaht Jee Esss". I mean, if you have to teach French, do it properly!</p>
+            <div class="right_sidebar">
+                <div class="main_container">
+                    <h2>Lucas Practice 1</h2>
+                    <div class="details">by <span class="author_1">Homer Simpson</span> | <span class="language_name">Node.js</span> | Posted on Thursday, November 28th 2019, 4:36:09pm</div>
+                    <p class="para_1">So, I saw this video on YouTube and this guy was teaching something called "Naahd Daaht Jee Esss". I mean, if you have to teach French, do it properly!</p>
+                </div>
+        
+                <div class="main_container">
+                    <h2>Lucas Practice 2</h2>
+                    <div class="details">by <span class="author_1">Homer Simpson</span> | <span class="language_name">Node.js</span> | Posted on Thursday, November 28th 2019, 4:36:09pm</div>
+                    <p class="para_1">So, I saw this video on YouTube and this guy was teaching something called "Naahd Daaht Jee Esss". I mean, if you have to teach French, do it properly!</p>
+                </div>
+        
+                <div class="main_container">
+                    <h2>Lucas Practice 3</h2>
+                    <div class="details">by <span class="author_1">Homer Simpson</span> | <span class="language_name">Node.js</span> | Posted on Thursday, November 28th 2019, 4:36:09pm</div>
+                    <p class="para_1">So, I saw this video on YouTube and this guy was teaching something called "Naahd Daaht Jee Esss". I mean, if you have to teach French, do it properly!</p>
+                </div>
+        
+                <div class="main_container">
+                    <h2>Lucas Practice 4</h2>
+                    <div class="details">by <span class="author_1">Homer Simpson</span> | <span class="language_name">Node.js</span> | Posted on Thursday, November 28th 2019, 4:36:09pm</div>
+                    <p class="para_1">So, I saw this video on YouTube and this guy was teaching something called "Naahd Daaht Jee Esss". I mean, if you have to teach French, do it properly!</p>
+                </div>
             </div>
-    
-            <div class="main_container">
-                <h2>Lucas Practice 3</h2>
-                <div class="details">by <span class="author_1">Homer Simpson</span> | <span class="language_name">Node.js</span> | Posted on Thursday, November 28th 2019, 4:36:09pm</div>
-                <p class="para_1">So, I saw this video on YouTube and this guy was teaching something called "Naahd Daaht Jee Esss". I mean, if you have to teach French, do it properly!</p>
-            </div>
-    
-            <div class="main_container">
-                <h2>Lucas Practice 4</h2>
-                <div class="details">by <span class="author_1">Homer Simpson</span> | <span class="language_name">Node.js</span> | Posted on Thursday, November 28th 2019, 4:36:09pm</div>
-                <p class="para_1">So, I saw this video on YouTube and this guy was teaching something called "Naahd Daaht Jee Esss". I mean, if you have to teach French, do it properly!</p>
-            </div>
-        </div>
 
-        <div class="footer">
-            <p>Creatd by Lucas</p>
+            <div class="footer_area">
+                Created by Lucas Kim
+            </div>
+
         </div>
+        
+
+        
 
     </div>
     
