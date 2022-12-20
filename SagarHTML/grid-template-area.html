@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            box-sizing: border-box;
+        }
+        .sagar{
+            background-color: black;
+            color: white;;
+            grid-area: monkey;
+        }
+        .sidebar{
+            background-color: orangered;
+            grid-area: sidebar;
+        }
+        .main{
+            background-color: blue;
+            grid-area: main;
+        }
+        .container{
+            display:grid;
+            border: 1px solid black;
+            height: 500px;
+            width: 700px;
+            grid-template-areas: "monkey monkey monkey monkey"
+                                 "sidebar main main main"
+                                 "sidebar main main main"
+                                 "sidebar main main main"
+                                 "sidebar main main main"            ;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main">main</div>
+        <div class="sidebar">sidebar</div>
+        <div class="sagar">header</div>
+    </div>
+</body>
+</html>
