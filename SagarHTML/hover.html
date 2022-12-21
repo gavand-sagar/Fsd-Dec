@@ -33,6 +33,31 @@
             height: 150px;
             overflow: hidden;
         }
+
+        .item{
+            padding-left: 0;
+            padding:20px;
+            transition: 1s;
+        }
+        .item:hover{
+            padding-left: 50px;
+        }
+
+        nav{
+            background-color: black;
+            color: white;
+            height: 30px;       
+        }
+
+        nav>span{
+            padding: 10px;
+            transition: 1s;
+        }
+
+        nav>span:hover{
+            background-color: rgba(171, 5, 5, 0.586);
+            box-shadow: 0 0 10px -5px;
+        }
     </style>
 </head>
 <body>
@@ -42,6 +67,18 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates dolor quas inventore dolorem debitis et voluptas alias reiciendis. Iste, rerum.
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates dolor quas inventore dolorem debitis et voluptas alias reiciendis. Iste, rerum.
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates dolor quas inventore dolorem debitis et voluptas alias reiciendis. Iste, rerum.
+    </div>
+
+    <nav>
+        <span>Home</span>
+        <span>About</span>
+        <span>Gallary</span>
+    </nav>
+
+    <div>
+       <div class="item">Sagar</div>
+       <div class="item">Mark</div>
+       <div class="item">Latha</div>
     </div>
 </body>
 </html>
