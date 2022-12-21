@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas_MediaQuery</title>
+    <style>
+        .header {
+            width: 800px;
+            height: 100px;
+            background-color: bisque;
+            display: block;
+        }
+
+        .main {
+            width: 800px;
+            height: 500px;
+            background-color: rgb(103, 108, 160);
+            display: block;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .footer {
+                width: 800px;
+                height: 50px;
+                background-color: rgb(192, 137, 155);
+                display: block;
+            }
+                
+        }
+    </style>
+</head>
+<body>
+    <div class="main_container">
+        <div class="header"></div>
+        <div class="main"></div>        
+        <div class="footer"></div>
+    </div>
+</body>
+</html>
