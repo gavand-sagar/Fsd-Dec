@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            box-sizing:border-box;
+            vertical-align:top;
+        }
+        footer {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        footer>span {
+            margin: 0.2rem;
+            padding: 0.5rem;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        footer>span:hover {
+            background-color: rgba(128, 128, 128, 0.623);
+        }
+
+
+        header {
+            position: sticky;
+            top: 0;
+            padding: 0.5rem;
+            background: linear-gradient(to bottom, green, darkgreen)
+        }
+
+        .sidebar-item{
+            border:2px solid green;;
+            padding: 0.2rem;
+            border-radius: 10px;
+            margin-top: 5px;
+        }
+
+        .sidebar-item:hover{
+            box-shadow: 0 0 10px 2px green;
+        }
+
+        .content-item{
+            display: inline-block;
+            border:2px solid orange;;
+            padding: 0.2rem;
+            border-radius: 10px;
+            margin: 5px;
+            height: 100px;
+            width: 100px;
+        }
+
+        .content-item:hover{
+            box-shadow: 0 0 10px 2px orange;
+        }
+
+
+        .sidebar {
+            display: inline-block;
+            width: 200px;
+        }
+
+        .content {
+            display: inline-block;
+            width:calc( 98% - 200px )
+        }
+
+        .active-link{
+            background-color:rgb(6, 122, 6);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        This is heading
+    </header>
+    <div class="sidebar">
+        <div class="sidebar-item">Sidebar Item 1</div>
+        <div class="sidebar-item">Sidebar Item 1</div>
+        <div class="sidebar-item">Sidebar Item 1</div>
+        <div class="sidebar-item">Sidebar Item 1</div>
+        <div class="sidebar-item">Sidebar Item 1</div>
+        <div class="sidebar-item">Sidebar Item 1</div>
+        <div class="sidebar-item">Sidebar Item 1</div>
+        <div class="sidebar-item">Sidebar Item 1</div>
+    </div>
+    <div class="content">
+        <h1>Some Content</h1>
+        <div class="content-item">content 1</div>
+        <div class="content-item">content 2</div>
+        <div class="content-item">content 3</div>
+        <div class="content-item">content 1</div>
+        <div class="content-item">content 2</div>
+        <div class="content-item">content 3</div>
+        <div class="content-item">content 1</div>
+        <div class="content-item">content 2</div>
+        <div class="content-item">content 3</div>
+    </div>
+    <footer>
+        <span>&lt;</span>
+        <span>1</span>
+        <span>2</span>
+        <span class="active-link">3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span>7</span>
+        <span>&gt;</span>
+    </footer>
+</body>
+
+</html>
