@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            vertical-align: top;
+        }
+        .header{
+            background:linear-gradient(to right,rgb(144, 2, 2),rgb(198, 8, 8),rgb(144, 2, 2));
+            height: 50px;
+        }
+
+        .footer{
+            background:linear-gradient(to right,rgb(144, 2, 2),rgb(198, 8, 8),rgb(144, 2, 2));
+            height: 50px; 
+            width: 100%;           
+            position: fixed;
+            bottom: 0;
+            display:none; /*hide */
+        }
+
+
+        .left-container{
+            display: inline-block;
+            width: 50%;
+        }
+
+        .right-container{
+            display: inline-block;
+            width: 35%;
+            padding-top: 300px;
+        }
+
+        .right-heading{
+            background-color: gray;
+            margin-top: 20px;
+            height: 50px;
+        }
+
+        .image{
+            margin-top: 50px;
+            height:70vh;
+            border: 1px solid black;
+        }        
+
+        /* @media screen and (max-width:1024px){
+
+        } */
+
+        /* @media print{
+
+        }
+
+        @media screen and (orientation:portrait) {
+            .header{
+                background:linear-gradient(to right,rgb(11, 2, 144),rgb(30, 8, 198),rgb(2, 7, 144));
+            }
+        }
+
+        @media screen and (orientation:landscape) {
+            .header{
+                background:linear-gradient(to right,rgb(144, 2, 2),rgb(198, 8, 8),rgb(144, 2, 2));
+            }
+        } */
+
+        /* Mobile screen related CSS */
+        @media screen and (max-width:767px){
+
+            html{
+                font-size: 30px;
+            }
+
+            .left-container{
+                display: block;
+                text-align: center;
+                width: 100%;                
+            }
+
+            .right-heading{
+                display: none;
+            }
+
+            .image{
+                height:30vh;
+            }
+
+            .right-container{
+                display: block;
+                width: 100%;
+                padding-top: 30px;
+                text-align: center;
+            }
+
+            .footer{
+                display:block;
+            }
+        }
+
+
+        
+
+
+    </style>
+</head>
+<body>
+    <div class="header"></div>
+    <div class="container">
+        <div class="left-container">
+            <img class="image" src="./Back.jpg" >
+        </div>
+        <div class="right-container">
+            <div class="right-heading"></div>
+            <div class="right-heading"></div>
+            <h2>Welcome</h2>
+            <button>Register</button>
+        </div>
+    </div>
+    <div class="footer"></div>
+</body>
+</html>
