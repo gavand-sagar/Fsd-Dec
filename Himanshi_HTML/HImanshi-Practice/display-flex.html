@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+     <!-- <style> 
+        /* /* div{
+            box-sizing: border-box;
+        }
+        .container{
+            background-color: grey;
+            height: 200px;
+            display: flex;
+            /* display: block; */
+            /* gap: 30px; */
+            justify-content: center; /* horizontal alin*/
+            /* justify-content: start; /* left alin */
+            /* justify-content: end; /* right alin */
+            /* justify-content: space-between; /* streching all the items*/
+            /* justify-content: space-around;streching all the items including left and right side as well. */ */
+            /* align-items: start; vertical align */
+            /* flex-direction: row; */
+            flex-direction: column;
+            /* justify content works w.r.t flex direction.*/
+        }
+        .green{
+            background-color: green;
+            /* margin-left: 30px; */
+        }
+        .red{
+            background-color: red;
+            /* margin-left: 30px; */
+        }
+        .blue{
+            /* background-color: blue; */
+            /* margin-left: 30px; */
+        } */
+
+    </style> -->
+    <style>
+        .flex-container{
+            width: 80%;
+            min-height: 300px;
+            margin: 0 auto;
+            display: -webkit-flex; /* Safari */     
+            display: flex; /* Standard syntax */
+        }
+        .flex-container .column{
+            padding: 10px;
+            background: #dbdfe5;
+            -webkit-flex: 1; /* Safari */
+            -ms-flex: 1; /* IE 10 */
+            flex: 1; /* Standard syntax */
+        }
+        .flex-container .column.bg-alt{
+            background: #b4bac0;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="green">Sagar</div>
+        <div class="red">Mark</div>
+        <div class="blue">Cam</div>
+    </div>
+
+</body>
+</html>
