@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            box-sizing: border-box;
+        }
+        .sagar{
+            background-color: black;
+            color: white;;
+            /* grid-area: monkey; */
+            grid-column-start: 1;
+            grid-column-end: -1;
+        }
+        .sidebar{
+            background-color: orangered;
+            /* grid-area: sidebar; */
+            /* width: 200px; */
+        }
+        .main{
+            background-color: blue;
+            /* grid-area: main; */
+            color: white;
+        }
+        .container{
+            display:grid;
+            border: 1px solid black;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 50px 1fr;
+            grid-template-areas: "monkey monkey monkey monkey"
+                                 "sidebar main main main"
+                                 "sidebar main main main"
+                                 "sidebar main main main"
+                                 "sidebar main main main"            ;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sagar">header</div>
+        <div class="sidebar">sidebar</div>
+        <div class="main">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, tenetur. Impedit, illo, consectetur possimus commodi aliquam odio maxime nam nisi sed voluptatum laudantium architecto tenetur ipsa modi assumenda voluptates dolore adipisci magni sequi accusantium quos? Facilis aut libero dicta nam?
+        </div>
+    </div>
+</body>
+</html>

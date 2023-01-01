@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        div{
+            border: 1px solid black;
+            padding: 10px;
+            width: 300px;
+            display: inline-block;
+            animation: sagar 1s infinite linear; 
+            overflow: hidden; 
+        }
+
+        button{
+            rotate: 0;            
+            animation: sagar 1s infinite linear;            
+        }
+
+        /* @keyframes sagar{
+            0%{
+                margin-left: 0;
+            }
+            100%{
+                margin-left: 200px;
+            }            
+        } */
+
+        @keyframes sagar{
+            0%{
+                /* transform: scale(1); */
+                /* rotate: 0; */
+                /* margin-left: 0; */
+                height: 20px;
+            }
+            100%{
+                /* transform: scale(3); */
+                /* rotate: 360deg; */
+                /* margin-left: 200px; */
+                height: 200px;
+            }            
+        }
+
+        body{
+            padding: 50px;
+        }
+
+
+        /* button{
+            rotate: 45deg;
+        } */
+
+    </style>
+</head>
+<body>
+    <h1>hi</h1>
+
+    <!-- <div>
+        <span>Apple</span>
+        <span>Banana</span>
+        <span>Grape</span>
+    </div> -->
+    <div>
+        <h1>this is a heading</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, molestias!</p>
+    </div>
+</body>
+</html>
