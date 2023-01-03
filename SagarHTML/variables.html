@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        :root{
+            --global-color:green;
+            --global-spacing:10px;
+        }
+
+        .green-theme *{
+            --global-color:green;
+            --global-spacing:10px;
+        }
+
+        .orange-theme *{
+            --global-color:orange;
+            --global-spacing:30px;
+        }
+
+        nav{
+            position: stickyS;
+            left: 0;
+            right: 0;
+            top: 0;
+            padding:var(--global-spacing)
+        }
+        footer{
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding:var(--global-spacing)
+        }        
+
+        p{
+            border-radius: var(--global-spacing);
+            padding:var(--global-spacing)
+        }
+
+        .global-background{
+            background-color: var(--global-color);
+        }
+
+
+        #somthing{
+            border: 10px solid red;
+        }
+
+        .global-border{
+            border: 3px solid var(--global-color);
+        }
+
+        li{
+            box-shadow: var(--global-color) 0 0 10px 5px;
+            padding: 5px;
+            line-height: 2;
+        }
+
+
+    </style>
+</head>
+<body class="green-theme">
+    <nav class="global-background">
+        <span>Home</span>
+        <span>About</span>
+        <span>Gallery</span>
+    </nav>
+    <div>
+        <p id="somthing" class="global-border">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam officiis corporis eaque nihil cupiditate libero accusamus nesciunt et illum vitae odit molestiae hic fugiat deserunt, dolores quae quo repudiandae esse.</p>
+        <p class="global-border">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam officiis corporis eaque nihil cupiditate libero accusamus nesciunt et illum vitae odit molestiae hic fugiat deserunt, dolores quae quo repudiandae esse.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam officiis corporis eaque nihil cupiditate libero accusamus nesciunt et illum vitae odit molestiae hic fugiat deserunt, dolores quae quo repudiandae esse.</p>
+    </div>
+    <div>
+        <h3>Services</h3>
+        <ul>
+            <li>frontend</li>
+            <li>frontend</li>
+            <li>frontend</li>
+            <li>HTML</li>
+        </ul>
+    </div>
+    <div>
+        <button class="global-background">Explore</button>
+        <button class="global-background">Somthing</button>
+        <button class="global-border">anything</button>
+        <button class="global-border">anything</button>
+        <button class="global-border">anything</button>
+    </div>
+    <footer class="global-background">
+        Copyright Sagar Gavand
+    </footer>
+</body>
+</html>
