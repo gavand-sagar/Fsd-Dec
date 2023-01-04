@@ -5,23 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+<style>
+.row{
+    padding: 10px;
+    border: 1px solid black;
+    margin:10px;
+}
+.bluerow{
+    padding: 10px;
+    border: 1px solid black;
+    margin:10px;
+    background-color: blue;
+}
+.redrow{
+    padding: 10px;
+    border: 1px solid black;
+    margin:10px;
+    background-color: red;
+}
+
+
+</style>
+
 </head>
 <body>
     <input id="textbox">
-    <button onclick="addrow">Add Row</button>
 
-    <div id="output">
+    <button onclick="addRow()">Add Row</button>
+    <button onclick="addbluerow()">Add blue Row</button>
+    <button onclick="addredrow()">Add red Row</button>
 
-    </div>
+    <div id="output"> </div>
 
     <script>
 let output = document.getElementById("output")
 let textbox = document.getElementById("textbox")
-function addRow(){
-    let value = textbox.value
-    output.innerHTML += `<p>${value}</p>`
-}
 
+function addRow(){
+    
+    output.innerHTML += `<p class = "row">${textbox.value}</p>` 
+}
+function addbluerow(){
+    output.innerHTML += `<p class ="bluerow">${textbox.value}</p>`
+    
+}
+function addredrow(){
+    output.innerHTML += `<p class ="redrow">${textbox.value}</p>`
+}
     </script>
 </body>
 </html>
