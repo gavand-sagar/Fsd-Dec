@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .row{
+            padding:10px;
+            border:1px solid black;
+            margin:10px;
+        }
+        .red-row{
+            padding:10px;
+            border:1px solid black;
+            margin:10px;
+            background-color:rgb(161, 27, 27);
+        }
+        .blue-row{
+            padding:10px;
+            border:1px solid black;
+            margin:10px;
+            background-color: rgb(49, 49, 204);
+        }
+    </style>
+</head>
+<body>
+    <input id="textbox">
+    <button onclick="addRow()">Add Row</button>
+    <button onclick="addBlueRow()">Add Blue Row</button>
+    <button onclick="addRedRow()">Add Red Row</button>
+    
+    <div id="output"></div>
+    
+    <script>
+        let output = document.getElementById("output")
+        let textbox = document.getElementById("textbox")
+
+        function addRow(){
+            output.innerHTML += `<p class="row">${textbox.value}</p>`    
+            clear()
+        }
+
+        function addRedRow(){
+            output.innerHTML += `<p class="red-row">${textbox.value}</p>`    
+            clear()  
+        }
+
+        function addBlueRow(){
+            output.innerHTML += `<p class="blue-row">${textbox.value}</p>`    
+            clear()  
+        }
+
+        function clear(){
+            textbox.value = ""        // clearing the text box 
+        }
+
+    </script>
+</body>
+</html>

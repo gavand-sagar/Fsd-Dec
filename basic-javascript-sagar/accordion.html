@@ -21,12 +21,12 @@
     <h1>THIS IS ALREADY THERE</h1>    
     
     <script>
-        function addButton(text, link) {
-            let data = `<a class="button" href="${link}">${text}</a>`;
+        function addButton(text, link,id) {
+            let data = `<a class="button" id="${id}" href="${link}">${text}</a>`;
             document.write(data);   
         }
-        addButton("Home", "./home.html");
-        addButton("Save", "./next.html");
+        addButton("Home", "./home.html","b1");
+        addButton("Save", "./next.html","b2");
 
         // function addParaWithHeading(heading,para){            
         //     let data = `<h1>${heading}</h1><p>${para}</p>`;
