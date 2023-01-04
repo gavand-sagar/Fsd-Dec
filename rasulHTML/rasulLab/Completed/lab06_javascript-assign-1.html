@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Assignment 1 - input music</title>
+    <script src="https://kit.fontawesome.com/2f0af7b763.js" crossorigin="anonymous"></script>
+    <style>
+
+        body{
+            margin: none;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        .top-container{
+            margin-top: 15vh;
+            margin-bottom: none;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .userInput{
+            width: 250px;
+            height: fit-content;
+        }
+
+        input{
+            width: 200px;
+            margin: 10px;
+        }
+
+        button{
+            width: 210px;
+            margin: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .bottom-container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        p{
+            width: 600px;
+            height: 50px;
+            background-color: rgba(249,249,249,255);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        span{
+            padding: 10px;
+        }
+        .name{
+            font-weight: bold;
+        }
+
+        .rating{
+             color: orange;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-container">
+        <div class="userInput">
+            <input id="songName" type="text" placeholder="Song Name"/>
+            <input id="artistName" type="text" placeholder="Artist Name"/>
+            <input id="rating" type="number" placeholder="Rating" min="1" max="5"/>
+            <button onclick="addRow()">Add</button>
+        </div>
+    </div>
+
+    <div class="bottom-container">
+        <div id="output"></div>
+    </div>
+    
+ 
+
+
+<script>
+
+        let songName = document.getElementById("songName")
+        let artistName = document.getElementById("artistName")
+        let rating = document.getElementById("rating")
+
+        //+= is to append
+        function addRow(){
+            output.innerHTML += `<p><span class="name">${songName.value} by ${artistName.value}</span><span class="rating">${ratingStar(rating)}</div></p>`;
+            clearText();
+        }
+
+        function clearText(){
+            songName.value = "";
+            artistName.value = "";
+            rating.value = "";
+        }
+
+        function ratingStar(rating){
+            if(rating.value == 5){
+                return `
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>`
+            } else if(rating.value == 4){
+                return `
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>`
+            } else if(rating.value == 3){
+                return `
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>`
+            } else if(rating.value == 2){
+                return `
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>`
+            } else{
+                return `<i class="fa-solid fa-star"></i>`
+            }
+            
+        }
+        
+</script>
+</body>
+</html>
