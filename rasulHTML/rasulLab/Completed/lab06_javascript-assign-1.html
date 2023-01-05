@@ -55,14 +55,12 @@
 
         span{
             padding: 10px;
-        }
-        .name{
             font-weight: bold;
         }
-
-        .rating{
-             color: orange;
+        .checked{
+            color: orange;
         }
+
     </style>
 </head>
 <body>
@@ -91,7 +89,7 @@
 
         //+= is to append
         function addRow(){
-            output.innerHTML += `<p><span class="name">${songName.value} by ${artistName.value}</span><span class="rating">${ratingStar(rating)}</div></p>`;
+            output.innerHTML += `<p><span>${songName.value} by ${artistName.value}</span><span>${ratingStar(rating)}</div></p>`;
             clearText();
         }
 
@@ -104,28 +102,39 @@
         function ratingStar(rating){
             if(rating.value == 5){
                 return `
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>`
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>`
             } else if(rating.value == 4){
                 return `
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
                 <i class="fa-solid fa-star"></i>`
             } else if(rating.value == 3){
                 return `
-                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>`
             } else if(rating.value == 2){
                 return `
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>`
             } else{
-                return `<i class="fa-solid fa-star"></i>`
+                return `
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>`
             }
             
         }
