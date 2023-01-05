@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <style>
+
+        .feedbackList
+        {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .feedback-container{
+            background-color: rgba(128, 128, 128, 0.34);
+            margin: 10px;
+            padding: 10px;
+            font-size: 20px;
+            font-family: sans-serif;
+        }
+
+        .feedbackForm {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap:30px;
+            align-items: center;
+            margin-top: 5%;
+        }
+
+        input[type="text"], input[type="number"]{
+            height: 50px;
+            width: 300px;
+            box-sizing: border-box;
+            border: 2px gray solid;
+            border-radius: 15px;
+            padding: 10px;
+        }
+
+        button{
+            height: 50px;
+            width: 200px;
+            box-sizing: border-box;
+            border: 2px gray solid;
+            border-radius: 15px;
+            padding: 10px;
+        }
+
+        .comment{
+            width: 75%;
+            overflow-wrap: break-word;
+            display: inline-block;
+        }
+
+        .rating{
+            float:right;
+            padding-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="feedbackForm">
+        <input type="text" id="comment" placeholder="Comment"/>
+        <input type="text" id="user" placeholder="Name"/>
+        <input type="number" id="rating" placeholder="Rating"/>
+        <button onclick="addFeedback()">Add Feedback</button>
+    </div>
+    <div id="feedback" class="feedbackList">
+
+    </div>
+
+    <script>
+
+        let comment = document.getElementById("comment");
+        let user = document.getElementById("user");
+        let rating = document.getElementById("rating");
+        let feedbackList = document.getElementById("feedback");
+
+        
+        function addFeedback()
+        {
+            if(comment.value == "")
+            {
+                alert("please enter comment");
+            }
+            else if(user.value== "")
+            {
+                alert("please enter your name");
+            }
+            else if(rating.value == "")
+            {
+                alert("please give your rating");
+            }
+            else{
+                let message = `<div class="feedback-container">
+                                    <p class="comment">${comment.value} by <b>${user.value}</b></p>
+                                    <p class="rating">${rating.value}</p>
+                                </div>`;
+                
+                feedbackList.innerHTML = feedbackList.innerHTML + message;
+                clearForm();
+            }
+            
+        }
+
+        function clearForm()
+        {
+            comment.value="";
+            user.value="";
+            rating.value="";
+        }
+    </script>
+</body>
+</html>
