@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input onchange="enterIntoSite()" placeholder="Age" id="ageInput" type="number" min="5" max="100" step="1">    
+    <span id="ageSpan"></span>
+    
+    <button>Enter Into Site</button>
+
+    <script>
+        let ageInput = document.getElementById('ageInput')
+        let ageSpan = document.getElementById('ageSpan')
+
+        function enterIntoSite(){
+            // check if input have value greater than 18            
+            ageSpan.innerHTML = ageInput.value
+        }
+    </script>
+</body>
+</html>
