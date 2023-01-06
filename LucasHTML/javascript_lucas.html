@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blue{ 
+            background-color: blue;
+            color: aliceblue;
+            width: 100px;
+        }
+        .red{
+            background-color: red;
+            color: aliceblue;
+            width: 100px;        
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <h1 id="e1">Heading</h1>
+    <p id="p1">Welcome</p>
+    <p id="p2">Welcome</p>
+
+    <button onclick="changeToApple()">Change To Appple</button><br><br>
+
+    <button onclick="changeToBlue()">Change To Blue</button><br><br><br><br><br><br>
+
+
+    <input id="textbox">
+    <button onclick="addRow()">Add Row</button>
+    <button onclick="addBlueRow()">Add Blue Row</button>
+    <button onclick="addRedRow()">Add Red Row</button><br><br>
+
+    <div id="output"></div><br>
+
+    <script>
+        let heading = document.getElementById('e1')
+        let paragraph = document.getElementById('p1')
+        let output = document.getElementById('output')
+        let textbox = document.getElementById('textbox')
+
+        function changeToApple() {
+            heading.innerHTML = "Apple"
+        }
+
+        function changeToBlue() {
+            heading.style.color = "blue"
+        }
+
+        function addRow(){
+            output.innerHTML += `<p>${textbox.value}</p>`
+        }
+
+        function addBlueRow(){
+            output.innerHTML += `<p class="blue">${textbox.value}</p>`
+        }
+
+        function addRedRow(){
+            output.innerHTML += `<p class="red">${textbox.value}</p>`
+        }
+
+
+        
+       
+
+
+    </script>
+    
+</body>
+</html>

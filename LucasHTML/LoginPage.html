@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .username {
+            padding: 10px;
+        }
+
+        .password {
+            padding: 10px;
+        }
+
+        .loginBtnDiv {
+            padding: 10px;
+        }
+
+        .homeBtn {
+            background-color: rgb(203, 176, 215);
+            border: 0;
+            border-radius: 5px;
+            padding: 10px;
+            width: 80px;
+            font-weight: 600;
+        }
+
+        .lucasBtn {
+            background-color: rgb(203, 176, 215);
+            border: 0;
+            border-radius: 5px;
+            padding: 10px;
+            width: 80px;
+            font-weight: 600;
+        }
+
+        .accountBtn {
+            background-color: rgb(203, 176, 215);
+            border: 0;
+            border-radius: 5px;
+            padding: 10px;
+            width: 80px;
+            font-weight: 600;
+        }
+
+        .learningBtn {
+            background-color: rgb(203, 176, 215);
+            border: 0;
+            border-radius: 5px;
+            padding: 10px;
+            width: 80px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lucas Login Page</h1>
+
+    <div class="username"><label for="">Username : <input id="inputUsername" type="text" placeholder="Enter username"></label></div>
+    <div class="password"><label for="">Password : <input id="inputPassword" type="password" placeholder="Enter password"></label></div>
+    <div class="loginBtnDiv"><button onclick="login()" style="padding: 10px;"><b>Login</b></button></div>
+
+    <div style="height: 50px;">&nbsp;</div>
+
+    <div>
+        <button class="homeBtn">Home</button>
+        <button class="lucasBtn">Lucas</button>
+        <button class="accountBtn">Account</button>
+        <button class="learningBtn">Learning</button>
+    </div>
+    <script>
+        let username = document.getElementById("inputUsername")
+        let password = document.getElementById("inputPassword")
+
+        function login(){
+            if(username.value == "Lucas" && password.value == "1234"){
+                alert("Welcome")
+            }
+            else{
+                alert("Invalid username or password")
+            }
+        }
+    </script>
+</body>
+</html>
