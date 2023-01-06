@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input onchange="enterIntoSite()" placeholder="DOB" id="dobInput" type="date" min="2023-01-15" max="2023-01-25">    
+    
+   
+    <hr>
+    <span id="dobSpan"></span>
+
+    <script>
+        let dobInput = document.getElementById('dobInput')
+        let dobSpan = document.getElementById('dobSpan')
+
+        function enterIntoSite(){
+            // check if input have value greater than 18            
+            dobSpan.innerHTML = dobInput.value
+        }
+    </script>
+</body>
+</html>
