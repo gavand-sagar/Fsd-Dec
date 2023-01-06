@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs</title>
+    <style>
+        .tabs {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            background-color: #f1f1f1;
+        }
+
+        .tabs button {
+            background-color: grey;
+            float: left;
+            /* border: none; */
+            margin-top: 5px;
+            margin-left: 3px;
+            margin-right: 3px;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 1s;
+            font-size: 17px;
+        }
+
+        .tabs button:hover {
+            background-color: rgba(221, 221, 221, 0.4);
+        }
+
+
+        .tabs button.active {
+            background-color: #ccc;
+        }
+
+        .tabContent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="tabs">
+        <button id="htmlTab" class="tab active" onclick="showContent('html')">HTML</button>
+        <button  id="cssTab"class="tab" onclick="showContent('css')">CSS</button>
+        <button  id="javascriptTab" class="tab" onclick="showContent('javascript')">Javascript</button>
+      </div>
+      
+      <div id="htmlContent" class="tabContent" style="display: block;">
+        <h3>HTML</h3>
+        <p>
+            The <b>HyperText Markup Language</b> or HTML is the standard markup language for documents designed 
+            to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) 
+            and scripting languages such as JavaScript.
+        </p>
+      </div>
+      
+      <div id="cssContent" class="tabContent">
+        <h3>CSS</h3>
+        <p>
+            Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation 
+            of a document written in a markup language such as HTML or XML (including XML dialects such as SVG, MathML or XHTML).[1] 
+            CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
+        </p> 
+      </div>
+      
+      <div id="javascriptContent" class="tabContent">
+        <h3>Javascript</h3>
+        <p>
+            JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript 
+            standard.[10] It has dynamic typing, prototype-based object-orientation, and first-class functions. 
+            It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. 
+            It has application programming interfaces (APIs) for working with text, dates, regular expressions, 
+            standard data structures, and the Document Object Model (DOM).
+        </p>
+      </div>
+      
+      <script>
+      function showContent(tabName) {
+        var tabs = document.getElementsByClassName("tab");
+        var tabContents = document.getElementsByClassName("tabContent");
+        for (i = 0; i < tabs.length; i++) {
+            tabs[i].classList.remove("active");
+            tabContents[i].style.display = "none";
+        }
+        document.getElementById(tabName+"Tab").classList.add("active");
+        document.getElementById(tabName+"Content").style.display = "block";
+      }
+    </script>
+</body>
+</html>
