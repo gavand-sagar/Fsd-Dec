@@ -14,11 +14,20 @@
             <label>Username <input type="text" name="username"></label><br><br>
             <label>Password <input type="password" name="password" id="passwordBox"></label><br><br>
 
-            <button type="reset">Clear All</button>
+            <input type="button" value="Any Custom logic">
+            <input id="resetButton" type="reset" value="Clear All">
+            <input id="loginButton" type="submit" value="Login">
+
+            <!-- <button type="reset">Clear All</button>
+            <button type="submit">Login</button>
+            <button type="button" onclick="CustomLogic()">Any Custom logic</button> -->
         </form>
         <!-- <button onclick="showOrHide()">ShowHide</button> -->
     </section>
-
+<script>
+    let loginButton = document.getElementById("loginButton")
+    let resetButton = document.getElementById("resetButton")
+</script>
     <!-- <script>
         let passwordBox = document.getElementById('passwordBox')
         function showOrHide(){
