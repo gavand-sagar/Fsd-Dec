@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accordion js</title>
+    <style>
+        .accordion {
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 3px;
+        }
+
+        p {
+            height: 0;
+            overflow: hidden;
+            transition: .3s;
+        }
+
+        .active p {
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="accordion" id="accordionOne">
+        <h1>Heading <button id="button" onclick="headingOneClick()">+</button> </h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus perferendis ducimus quaerat quis
+            laboriosam assumenda aliquam architecto modi molestias aliquid.</p>
+    </div>
+
+    <script>
+        let accordionOne = document.getElementById('accordionOne')
+        let button = document.getElementById('button')
+        function headingOneClick() {
+
+            if(button.innerHTML == "+"){
+                button.innerHTML = "-"
+            }else{
+                button.innerHTML = "+"
+            }
+
+            if (accordionOne.classList.contains('active')) {
+                accordionOne.classList.remove('active')
+            } else {
+                accordionOne.classList.add('active')
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementById</title>
+</head>
+<body>
+    <h1 id="h1">Heading</h1>
+    <p id="p1">first para</p>
+    
+    <button onclick="changeApple()">Change To Apple</button>
+    <button onclick="changeBlue()">Change To Blue</button>
+
+<script>
+
+    let heading = document.getElementById('h1')
+    let paragraph = document.getElementById('p1')
+
+    function changeApple(){
+        heading.innerHTML = "Apple"
+    }
+
+    function changeBlue(){
+        heading.style.backgroundColor = "blue"
+    }
+    
+/*     heading.innerHTML = "New Heading"
+    paragraph.innerHTML = "new para"
+    paragraph.style.backgroundColor = "red" */
+</script>
+</body>
+</html>

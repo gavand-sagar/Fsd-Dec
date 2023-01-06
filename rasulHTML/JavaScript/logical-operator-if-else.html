@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logical operator - if else</title>
+    <style>
+        body{
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        .top-container{
+            display: flex;
+            justify-content: center;
+        }
+
+        .input-container{
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            margin-top: 15vh;
+            text-align: center;
+        }
+        input{
+            margin: 5px;
+        }
+
+        button{
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-container">
+        <div class="input-container">
+            <input id="username" type="text" placeholder="username"/>
+            <input id="password" type="text" placeholder="password"/>
+            <br/>
+            <button onclick="login()">Enter To Website</button>
+        </div>
+    </div>
+
+<script>
+
+    let username = document.getElementById('username')
+    let password = document.getElementById('password')
+
+    function login(){
+        if(username.value.toLowerCase() == "rasulhayat" && password.value == "123456"){
+            alert("Welcome")
+        } else{
+            alert("Invalid")
+        }
+    }
+</script>    
+</body>
+</html>
