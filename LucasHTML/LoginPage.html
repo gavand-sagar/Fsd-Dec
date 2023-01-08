@@ -21,40 +21,49 @@
             padding: 10px;
         }
 
-        .homeBtn {
+        #homeBtn {
             background-color: rgb(203, 176, 215);
             border: 0;
             border-radius: 5px;
             padding: 10px;
             width: 80px;
             font-weight: 600;
+            transition: 1s;
         }
 
-        .lucasBtn {
+        #lucasBtn {
             background-color: rgb(203, 176, 215);
             border: 0;
             border-radius: 5px;
             padding: 10px;
             width: 80px;
             font-weight: 600;
+            transition: 1s;
         }
 
-        .accountBtn {
+        #accountBtn {
             background-color: rgb(203, 176, 215);
             border: 0;
             border-radius: 5px;
             padding: 10px;
             width: 80px;
             font-weight: 600;
+            transition: 1s;
         }
 
-        .learningBtn {
+        #learningBtn {
             background-color: rgb(203, 176, 215);
             border: 0;
             border-radius: 5px;
             padding: 10px;
             width: 80px;
             font-weight: 600;
+            transition: 1s;
+        }
+
+        .active {
+            background-color: yellow !important;
+            transition: 1s;
         }
     </style>
 </head>
@@ -68,14 +77,18 @@
     <div style="height: 50px;">&nbsp;</div>
 
     <div>
-        <button class="homeBtn">Home</button>
-        <button class="lucasBtn">Lucas</button>
-        <button class="accountBtn">Account</button>
-        <button class="learningBtn">Learning</button>
+        <button onclick="homeBtnClicked()" id="homeBtn">Home</button>
+        <button onclick="lucasBtnClicked()" id="lucasBtn">Lucas</button>
+        <button onclick="accountBtnClicked()" id="accountBtn">Account</button>
+        <button onclick="learningBtnClicked()" id="learningBtn">Learning</button>
     </div>
     <script>
         let username = document.getElementById("inputUsername")
         let password = document.getElementById("inputPassword")
+        let homeBtn = document.getElementById("homeBtn")
+        let lucasBtn = document.getElementById("lucasBtn")
+        let accountBtn = document.getElementById("accountBtn")
+        let learningBtn = document.getElementById("learningBtn")
 
         function login(){
             if(username.value == "Lucas" && password.value == "1234"){
@@ -84,6 +97,58 @@
             else{
                 alert("Invalid username or password")
             }
+        }
+
+        function homeBtnClicked() {
+                if(homeBtn.classList.contains("active")){
+                    lucasBtn.classList.remove("active")
+                    accountBtn.classList.remove("active")
+                    learningBtn.classList.remove("active")
+                } else {
+                    homeBtn.classList.add("active")
+                    lucasBtn.classList.remove("active")
+                    accountBtn.classList.remove("active")
+                    learningBtn.classList.remove("active")
+                }
+        }
+
+        function lucasBtnClicked() {
+                if(lucasBtn.classList.contains("active")){
+                    homeBtn.classList.remove("active")
+                    accountBtn.classList.remove("active")
+                    learningBtn.classList.remove("active")
+                } else {
+                    lucasBtn.classList.add("active")
+                    homeBtn.classList.remove("active")
+                    accountBtn.classList.remove("active")
+                    learningBtn.classList.remove("active")
+                }
+        }
+
+        function accountBtnClicked() {
+                if(accountBtn.classList.contains("active")){
+                    homeBtn.classList.remove("active")
+                    lucasBtn.classList.remove("active")
+                    learningBtn.classList.remove("active")
+                } else {
+                    accountBtn.classList.add("active")
+                    homeBtn.classList.remove("active")
+                    lucasBtn.classList.remove("active")
+                    learningBtn.classList.remove("active")
+                }
+        }
+
+        function learningBtnClicked() {
+                if(learningBtn.classList.contains("active")){
+                    document.getElementById("homeBtn").classList.remove("active")
+                    accountBtn.classList.remove("active")
+                    lucasBtn.classList.remove("active")
+                } else {
+                    learningBtn.classList.add("active")
+                    document.getElementById("homeBtn").classList.remove("active")
+                    accountBtn.classList.remove("active")
+                    lucasBtn.classList.remove("active")
+                }
         }
     </script>
 </body>
