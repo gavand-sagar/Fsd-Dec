@@ -12,11 +12,12 @@
         border-radius: 3px;
     }
     p{
-        display: none;
+        height: 0;
         overflow: hidden;
         transition: 1s;
     }
    .active p{
+    height: 100px;
         display: block;
     }
 </style>
@@ -24,13 +25,21 @@
 </head>
 <body>
     <div class="accordion" id="accordionOne">
-        <h1 onclick="headingOneClick()">Heading</h1>
-        <p>Lorem ipsum dolor sit. ipsum dolor sit amet.</p>
+        <h1>Heading <button id="button" onclick="headingOneClick()">+</button></h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto, ab! ipsum dolor sit. ipsum dolor sit amet.</p>
     </div>
 
     <script>
         let accordionOne = document.getElementById("accordionOne")
+        let button = document.getElementById('button')
 function headingOneClick(){
+
+        if(button.innerHtml == "+"){
+            button.innerHtml = "-"
+        }else{
+            button.innerHtml = "+"
+        }
+
           if(accordionOne.classList.contains('active')){
             accordionOne.classList.remove('active')
           }else{
