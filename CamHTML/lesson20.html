@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .accordion{
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 3px;
+    }
+    p{
+        display: none;
+        overflow: hidden;
+        transition: 1s;
+    }
+   .active p{
+        display: block;
+    }
+</style>
+
+</head>
+<body>
+    <div class="accordion" id="accordionOne">
+        <h1 onclick="headingOneClick()">Heading</h1>
+        <p>Lorem ipsum dolor sit. ipsum dolor sit amet.</p>
+    </div>
+
+    <script>
+        let accordionOne = document.getElementById("accordionOne")
+function headingOneClick(){
+          if(accordionOne.classList.contains('active')){
+            accordionOne.classList.remove('active')
+          }else{
+            accordionOne.classList.add('active')
+          }
+}
+
+    </script>
+</body>
+</html>
