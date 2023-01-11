@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button {
+            border: none;
+            padding: 10px;
+            background-color: rgb(32, 32, 164);
+            color: white;
+        }
+
+        .active {
+            background-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <script>
+
+        let list = ["Home", "About", "Gallery", "Contact Us"]
+
+        for (let item of list) {
+            document.write(`<button class="button">${item}</button>`)
+        }
+
+    </script>
+</body>
+
+</html>
