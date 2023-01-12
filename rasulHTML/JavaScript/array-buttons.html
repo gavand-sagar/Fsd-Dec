@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array buttons</title>
+    <style>
+        
+        #output{
+            width: 200px;
+        }
+
+        button{
+            background: linear-gradient(to top right, #a70c89,#f12c5c);
+            color: white;
+            border-radius: 20px;
+            margin: 5px;
+            padding: 10px;
+            border: 0;
+            cursor: pointer;
+
+        }
+
+        button:hover{
+            background: linear-gradient(to top right, #0f0ca7,#502cf1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div id="output"></div>
+    </div>
+    
+
+    <script>
+
+        let list = ["JavaScript", "React", "Node.js", "React Router",
+        "Redux", "GraphQL", "HTML5", "CSS3", "Java", "Python"]
+
+        for (let item of list) {
+            output.innerHTML += (`<button class="button">${item}</button>`)
+        }
+
+    </script>
+</body>
+</html>

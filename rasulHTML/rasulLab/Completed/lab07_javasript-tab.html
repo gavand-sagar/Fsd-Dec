@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>lab07 JavaScript tab</title>
     <style>
+
+      :root{
+        --background-color: rgba(235, 235, 235, 255);
+      }
+
       body {
         box-sizing: border-box;
         font-family: sans-serif;
@@ -14,32 +19,38 @@
 
       .button {
         font-size: 1.5rem;
-        border: 1px solid rgba(235, 235, 235, 255);
+        border: 1px solid var(--background-color);
         padding: 10px;
         background-color: transparent;
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
-        border-bottom: 0;
+        /* border-bottom: 0; */
         cursor: pointer;
-        transition: 0.3s;
+      }
+
+      .x-space{
+        font-size: 12px;
+        width: 200px;
+        border-bottom: 1px solid var(--background-color);
       }
 
       .button:hover {
-        background-color: rgba(235, 235, 235, 255);
+        background-color: var(--background-color);
       }
 
       .active-button {
-        background-color: rgba(235, 235, 235, 255);
+        /* background-color: var(--background-color); */
+        border-bottom: 0;
       }
 
       main {
         font-size: 16px;
         padding: 10px;
-        border: 1px solid rgba(235, 235, 235, 255);
+        /* border: 1px solid var(--background-color); */
         border-radius: 3px;
         height: 150px;
         position: relative;
-        background-color: rgba(235, 235, 235, 255);
+        /* background-color: var(--background-color); */
       }
 
       p {
