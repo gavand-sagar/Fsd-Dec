@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array-map-find-filter-join-some-every</title>
+</head>
+<body>
+    
+    <script>
+
+        // // show length
+        // let oldArray = ["Home","About","Gallery","Contact Us"] 
+
+        // let newArray = oldArray.map(oldItem => oldItem.length)
+
+        // document.write(newArray.join() + "<br>")
+
+        // // show last letter
+        // let showLastLetter = oldArray.map(oldItem => oldItem.charAt(oldItem.length - 1))
+
+        // document.write(showLastLetter.join() + "<br>")
+
+
+        // // show first and last letter
+        // let showFirstLastLetter = oldArray.map(oldItem => (oldItem.charAt(0) + oldItem.charAt(oldItem.length - 1)))
+
+        // document.write(showFirstLastLetter.join() + "<br>")
+
+        let oldArray = ["Latha","Magda","Anton","Shahnaz","Lucas", "Mike", "Rasul"] 
+        
+        let onlyFives = oldArray.filter(item => item.length== 5)
+
+        let onlyFirstLetter = onlyFives.map(item => item.charAt(0))
+        
+        document.write(onlyFirstLetter.join('<br>'))
+
+    </script>
+</body>
+</html>
