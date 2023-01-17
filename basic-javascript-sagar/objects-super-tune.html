@@ -10,17 +10,25 @@
 
 <body>
     <script>
+
+
         class Song {
             songName;
             artistName;
             rating;
+            imageURL;
+
+            getRatingDiv(value) {
+                return `<span></span><span></span><span></span><span></span>`
+            }
 
             Display() {
                 document.write(`                
                 <div>
+                    <span><img src="${this.imageURL}"/></span>
                     <span>${this.songName}</span>
                     <span>${this.artistName}</span>
-                    <span>${this.rating == undefined ? "" : this.rating}</span>
+                    <span>${this.getRatingDiv(this.rating)}</span>
                 </div>                
                 `)
             }
@@ -57,14 +65,23 @@
 
 
         let songsList = [
-            new Song("Vibe", "Cookiee"),
+            new Song("Vibe", "Cookiee",3),
+            new Song("Perfect", "Ed Sheeran", 2),
             new Song("Perfect", "Ed Sheeran", 5),
-            new Song("Perfect", "Ed Sheeran", 5),
-            new Song("Perfect", "Ed Sheeran", 5),
-            new Song("Perfect", "Ed Sheeran", 5),
+            new Song("Perfect", "Ed Sheeran", 1),
+            new Song("Perfect", "Ed Sheeran", 4),
         ]
-        
-        
+
+
+        function sortByRating() {
+
+
+            let sortedCollection = songsList.sort((a, b) => a.rating > b.rating ? -1 : 0);
+            for (const item of sortedCollection) {
+                item.Display();
+            }
+
+        }
 
 
 
