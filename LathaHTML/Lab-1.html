@@ -41,6 +41,7 @@
             border-radius: 30px;
             font-size: 20px;
             margin-bottom: 20px;
+            margin-right: 10px;
             border: none;
         }
 
@@ -113,14 +114,14 @@
         <div class="horizontalLine">
         </div>
         <div class="bottom-container">
-            <div class="left-container">
-                <button type="button" class="pink-button">Javascript</button>
+            <div class="left-container" id="menuBar">
+                <!-- <button type="button" class="pink-button">Javascript</button>
                 <button type="button" class="pink-button">React</button>
                 <button type="button" class="pink-button">Node.Js</button>
                 <button type="button" class="pink-button">HTML5</button>
                 <button type="button" class="pink-button">CSS3</button>
                 <button type="button" class="pink-button">Phyton</button>
-                <button type="button" class="purple-button">All Posts</button>
+                <button type="button" class="purple-button">All Posts</button> -->
             </div>
             <div class="right-container">
                 <div class="sub-container">
@@ -149,5 +150,22 @@
             </div>
         </div>
     </div>
+
+    <script>
+        let list=['Javascript','React','HTML5','CSS3','Phyton','Redux','GraphQL','Java','All Posts']
+        list.forEach(item=> document.getElementById("menuBar").innerHTML+=(`<button type="button" class="${item == 'All Posts'?'purple-button':'pink-button'}">${item}</button>`));
+        
+        //for(let item of list)
+        //{
+            // if(item == 'All Posts')
+            // {
+            //     document.getElementById("menuBar").innerHTML+=(`<button type="button" class="purple-button">${item}</button>`);
+            // }
+            // else{
+            //document.getElementById("menuBar").innerHTML+=(`<button type="button" class="${item == 'All Posts'?'purple-button':'pink-button'}">${item}</button>`);
+        
+            // }
+        //}
+    </script>
 </body>
 </html>
