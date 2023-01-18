@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Songs of the week</title>
+</head>
+<body>
+
+    <script>
+        
+        class Song {
+            songName;
+            artistName;
+            rating;
+
+            display(){
+                document.write(
+                    `
+                    <div>
+                    <span>${this.songName}</span>
+                    <span>${this.artistName}</span>
+                    <span>${this.rating}</span>
+                    </div>
+                    `
+                )
+            }
+            
+            constructor(s,a,r){
+                this.songName = s;
+                this.artistName = a;
+                this.rating = r;
+            }
+        }
+
+        let songList = [
+            new Song("Vibe", "Cookiee", 7),
+            new Song("Perfect", "Ed Sheeran", 5)
+        ]
+
+        for (const song of songList) {
+            song.display();
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input id="inputBox">
+    <button onclick="addNew()">Add New Item</button>
+    <hr>
+    <button onclick="remove()">Remove</button>
+    <button onclick="showAll()">Show all</button>
+    <hr>
+    <div id="output"></div>
+    
+    <script>
+        let output = document.getElementById("output")
+        let list = ["apple", "mango", "grape"]
+        let inputBox = document.getElementById("inputBox")
+
+        function showAll() {
+            output.innerHTML = list.join()
+        }
+
+        function addNew() {
+            list.push(inputBox.value)
+        }
+
+        function remove() {
+            
+            let value = inputBox.value
+
+            let index = list.indexOf(value)
+
+            list.splice(index,1)
+        }
+        
+        
+
+
+    </script>
+</body>
+</html>

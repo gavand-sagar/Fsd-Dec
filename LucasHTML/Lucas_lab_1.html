@@ -127,7 +127,8 @@
         }
         
         body {
-            margin: 0;
+            margin: 10px;
+            padding: 10px;
         }
 
         div {
@@ -142,7 +143,7 @@
         }
 
         .body_area {
-            background-color: #dab0cd;
+            background-color: #ecd8e6;
             padding: 20px;
         }
 
@@ -156,7 +157,7 @@
 </head>
 <body>
 
-    <div class="wrap_container">
+    <!-- <div class="wrap_container">
 
         <div class="header_area">
             <div class="headline_text">Lucas Practice 01</div>
@@ -220,11 +221,103 @@
                 Created by Lucas Kim
             </div>
 
+        </div> -->
+        
+        <input id="input">
+        <button onclick="search()">Search</button>
+        <button onclick="showAll()">Show All</button>
+        <button onclick="sort()">Sort by heading</button>
+        <hr>
+        <div id="output"></div>
+
         </div>
-        
 
         
+        <script>
+            
+            let input = document.getElementById("input")
+            let output = document.getElementById("output")
 
+            class Post{
+                heading;
+                author;
+                technologyName;
+                date;
+                content;
+
+                // Display(){
+                //     document.write(
+                //         `
+                //         <div class="main_container">
+                //             <h2>${this.heading}</h2>
+                //             <div class="details">by <span class="author_1">${this.author}</span> | <span class="language_name">${this.technologyName}</span> | Posted on ${this.date}</div>
+                //             <p class="para_1">${this.content}</p>
+                //         </div>
+                //         `
+                //     )
+
+                // }
+
+                Display(){
+                    output.innerHTML += `
+                            <div class="main_container">
+                               <h2>${this.heading}</h2>
+                               <div class="details">by <span class="author_1">${this.author}</span> | <span class="language_name">${this.technologyName}</span> | Posted on ${this.date}</div>
+                               <p class="para_1">${this.content}</p>
+                           </div>
+                    `
+                }
+
+                constructor(heading,author,technologyName,date,content){
+                    this.heading = heading;
+                    this.author = author;
+                    this.technologyName = technologyName;
+                    this.date = date;
+                    this.content = content;
+                }
+            }
+
+            let postList = [
+                new Post("cLucas Practice 1","Lucas","Node.js","Thursday, November 28th 2019, 4:36:09pm","So, I saw this video on YouTube and this guy was teaching something called Naahd Daaht Jee Esss. I mean, if you have to teach French, do it properly!"),
+                new Post("bLucas Practice 2","Rachel","Node.js","Thursday, November 28th 2019, 4:36:09pm","So, I saw this video on YouTube and this guy was teaching something called Naahd Daaht Jee Esss. I mean, if you have to teach French, do it properly!"),
+                new Post("dLucas Practice 3","Homer","Node.js","Thursday, November 28th 2019, 4:36:09pm","So, I saw this video on YouTube and this guy was teaching something called Naahd Daaht Jee Esss. I mean, if you have to teach French, do it properly!"),
+                new Post("aLucas Practice 4","Homer","Node.js","Thursday, November 28th 2019, 4:36:09pm","So, I saw this video on YouTube and this guy was teaching something called Naahd Daaht Jee Esss. I mean, if you have to teach French, do it properly!")
+            ]
+
+            for (const post of postList) {
+                
+                post.Display();
+            }
+
+            function showAll(){
+                output.innerHTML = "";
+                for (const post of postList) {
+                post.Display();
+            }
+                input.value = "";
+            }
+
+            function sort() {
+                
+                let sortedCollection = postList.sort((a,b) => a.heading < b.heading ? -1 : 0);
+                output.innerHTML = "";
+                for (const post of sortedCollection) {
+                post.Display();
+                }
+            }
+
+            function search() {
+                output.innerHTML = "";
+                for (const list of postList) {
+                    if(list.author == input.value) {
+                        list.Display();
+                    }                    
+                }
+            }
+
+
+
+        </script>
     </div>
     
     

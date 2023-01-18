@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Timeout</title>
+</head>
+<body>
+    
+    <button onclick="magic()">Magic</button><br>
+    <progress id="loader" max="100" value="0"></progress>
+
+    <script>
+
+        let output = document.getElementById("output")
+        let loader = document.getElementById("loader")
+
+        let number = 0
+        let t;
+        function magic(){
+            t = setInterval(change,50)
+        }
+
+        function change(){
+            number = number + 1
+            loader.value = number
+            if(number == 100) {
+                number = 0
+                clearInterval(t)
+            }
+        }
+        
+
+
+
+    </script>
+</body>
+</html>

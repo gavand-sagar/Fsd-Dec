@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #buttonGroup {
+            width: 200px;
+            height: 400px;
+            border: 1px solid black;
+            padding:10px;
+        }
+
+        #button {
+            background: linear-gradient(to top right, #ac96b3, #8abbd4);
+            padding: 10px;
+            border: none;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #button_Ian {
+            background: linear-gradient(to top right, #530a69, #b09e38);
+            padding: 10px;
+            border: none;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="buttonGroup"></div>
+    
+
+    <script>
+        let buttongroup = document.getElementById("buttonGroup")
+        let list = ["Lucas", "Mark", "Sagar", "Java", "React", "Evan", "Rita", "Eden", "Ian", "Hannah"]
+
+        for (let item of list){
+            document.getElementById("buttonGroup").innerHTML += item == `Ian` ? `<button id="button">${item}</button>` : `<button id="button_Ian">${item}</button>`
+        }
+        
+
+    </script>
+</body>
+</html>
