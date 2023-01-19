@@ -18,7 +18,7 @@
         function getActivity(){
 
             fetch('https://www.boredapi.com/api/activity')
-                .then(s => s.json())
+                .then(response => response.json())
                 .then(data => {
                     //actual code that needs to be performed after we get data
                     output.innerHTML = data.activity +"<br>"

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="output"></div>
+    
+
+    <script>
+
+        // doShowAlertAfterFiveSecond("After 5 seconds")
+
+        // function doShowAlertAfterFiveSecond(name){ 
+
+        //     setTimeout(() => {
+        //         alert(name)
+        //     }, 5000);
+        // }
+
+        // doShowAfterSomeSeconds("Sagar", 2);
+        // doShowAfterSomeSeconds("Latha", 2);
+        // doShowAfterSomeSeconds("Lucas", 6);
+        // doShowAfterSomeSeconds("Ekta", 4);
+
+        // let seconds;
+
+        // function doShowAfterSomeSeconds(name,delay){ 
+
+
+        //     setTimeout(() => {
+        //         document.write(name)
+        //     }, delay * 1000);
+        // }
+
+        let output = document.getElementById('output')
+
+        // doShowAfterSomeSeconds("Sagar", 2, "Done");
+        // doShowAfterSomeSeconds("Rasul", 5, "Ok");
+
+        // function doShowAfterSomeSeconds(name,delay, afterText){ 
+        //     output.innerHTML += "..."
+        //     setTimeout(() => {
+        //         output.innerHTML += name
+        //         output.innerHTML += afterText
+        //     }, delay * 1000);
+        // }
+
+        // function choice1(){
+        //     output.innerHTML += "1st End"
+        //     output.innerHTML += "<br>"
+        // }
+
+        // function choice2(){
+        //     output.innerHTML += "2nd End"
+        //     output.innerHTML += "<br>"
+        // }
+        
+        // doShowAfterSomeSeconds("1st Start", 3, choice1);
+        // doShowAfterSomeSeconds("2nd Start", 1, choice2);
+
+
+
+        // function doShowAfterSomeSeconds(beforeText, delay, func) {
+
+        //     output.innerHTML += beforeText
+        //     output.innerHTML += "<br>"
+        //     setTimeout(() => {
+        //         func()
+        //     }, delay * 1000)
+            
+        // }
+
+        function choice1(){
+            output.innerHTML += "1st End"
+            output.innerHTML += "<br>"
+        }
+
+        function choice2(){
+            output.innerHTML += "2nd End"
+            output.innerHTML += "<br>"
+        }
+        
+        doShowAfterSomeSeconds("1st Start", 3, choice1);
+        doShowAfterSomeSeconds("2nd Start", 1, choice2);
+
+
+
+        function doShowAfterSomeSeconds(beforeText, delay, func) {
+
+            output.innerHTML += beforeText
+            output.innerHTML += "<br>"
+            setTimeout(() => {
+                func()
+            }, delay * 1000)
+            
+        }
+
+
+    </script>
+</body>
+</html>

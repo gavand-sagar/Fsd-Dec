@@ -180,7 +180,7 @@
 
         if (titleOrder == true) {
           sortedTitle = songsList.sort((a, b) =>
-            a.songName < b.songName ? -1 : 0
+            a.songName.toUpperCase() < b.songName.toUpperCase() ? -1 : 0
           );
           titleOrder = false;
           ratingOrder = true;
