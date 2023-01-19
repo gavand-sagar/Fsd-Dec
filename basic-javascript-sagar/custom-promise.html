@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="output"></div>
+    <script>
+        let output = document.getElementById('output')
+        // fetch("https://catfact.ninja/fact")
+        //     .then(response => {
+        //         alert('A')
+        //     })
+
+        // alert('B')
+
+
+        // doShowAlertAfterThreeSecond("Sagar");
+
+        // doShowAlertAfterThreeSecond("Latha");
+
+        // doShowAlertAfterThreeSecond("Lucas");
+
+        // doShowAlertAfterThreeSecond("Ekta");
+
+
+        // function doShowAlertAfterThreeSecond(name){
+        //     setTimeout(() =>{
+        //         document.write(name)
+        //     },3000)
+        // }
+
+
+        // doShowAfterSomeSeconds("Sagar",2);
+
+        // doShowAfterSomeSeconds("Latha",1);
+
+        // doShowAfterSomeSeconds("Lucas",6);
+
+        // doShowAfterSomeSeconds("Ekta",4);
+
+
+        // function doShowAfterSomeSeconds(name,delay){
+        //     setTimeout(() =>{
+        //         document.write(name)
+        //     },delay * 1000)
+        // }
+
+
+
+
+        // doShowAfterSomeSeconds("1st Start", 3, () => {
+        //     output.innerHTML += "1st End"
+        //     output.innerHTML += "<br>"
+
+        //     doShowAfterSomeSeconds("2nd Start", 3, () => {
+        //         output.innerHTML += "2nd End"
+        //         output.innerHTML += "<br>"
+
+        //         doShowAfterSomeSeconds("3rd Start", 3, () => {
+        //             output.innerHTML += "3rd End"
+        //             output.innerHTML += "<br>"
+        //         });
+        //     });
+        // });// alert for done      
+
+        // function doShowAfterSomeSeconds(beforeText, delay, func) {
+        //     output.innerHTML += beforeText
+        //     output.innerHTML += "<br>"
+        //     setTimeout(() => {
+        //         func()
+        //     }, delay * 1000)
+
+        // }
+
+
+        // function endFirst() {
+        //     output.innerHTML += "1st End"
+        //     output.innerHTML += "<br>"
+        //     doShowAfterSomeSeconds("2nd Start", 3, endSecond);
+        // }
+
+        // function endSecond() {
+        //     output.innerHTML += "2nd End"
+        //     output.innerHTML += "<br>"
+        //     doShowAfterSomeSeconds("3rd Start", 3, endThird);
+        // }
+
+        // function endThird() {
+        //     output.innerHTML += "3rd End"
+        //     output.innerHTML += "<br>"
+        // }
+
+        // doShowAfterSomeSeconds("1st Start", 3,endFirst);// alert for done      
+
+        // function doShowAfterSomeSeconds(beforeText, delay, func) {
+        //     output.innerHTML += beforeText
+        //     output.innerHTML += "<br>"
+        //     setTimeout(() => {
+        //         func()
+        //     }, delay * 1000)
+
+        // }
+
+
+
+
+
+        function endFirst() {
+            output.innerHTML += "1st End"
+            output.innerHTML += "<br>"
+        }
+        function endSecond() {
+            output.innerHTML += "2nd End"
+            output.innerHTML += "<br>"
+        }
+        function endThird() {
+            output.innerHTML += "3rd End"
+            output.innerHTML += "<br>"
+        }
+
+        
+        async function perform() {
+
+            // let result = await fetch('https://catfact.ninja/fact')
+            // let data = await result.json();
+
+            // console.log(data)
+            await doShowAfterSomeSeconds("1st Start", 2)
+            endFirst()
+            await doShowAfterSomeSeconds("2nd Start", 2);
+            endSecond()
+            await doShowAfterSomeSeconds("3rd Start", 2)
+            endThird()
+        }
+
+        perform()
+
+        async function doShowAfterSomeSeconds(beforeText, delay) {
+            return new Promise((resolve, reject) => {
+                
+                output.innerHTML += beforeText
+                output.innerHTML += "<br>"
+                setTimeout(() => {
+                    resolve()//completion of awaitable function
+                }, delay * 1000)
+
+            })
+        }
+
+
+
+
+
+
+        // async function perform() {
+        //     doShowAfterSomeSeconds("1st Start", 2,endFirst)
+        //     doShowAfterSomeSeconds("2nd Start", 2,endSecond);
+        //     doShowAfterSomeSeconds("3rd Start", 2,endThird)          
+        // }
+
+
+
+
+    </script>
+</body>
+
+</html>
