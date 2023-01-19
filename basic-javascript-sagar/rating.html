@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .red {
+            color: rgb(23, 23, 146);
+        }
+
+        .black {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        "use strict"
+        // function getRating(number) {
+        //     if (number == 1) {
+        //         return `
+        //         <span class="red">	&#9733;</span> 
+        //         <span class="black">	&#9733;</span> 
+        //         <span class="black">	&#9733;</span> 
+        //         <span class="black">	&#9733;</span> 
+        //         <span class="black">	&#9733;</span> 
+        //     `
+        //     } else if (number == 2) {
+        //         return `
+        //         <span class="red">	&#9733;</span> 
+        //         <span class="red">	&#9733;</span> 
+        //         <span class="black">	&#9733;</span> 
+        //         <span class="black">	&#9733;</span> 
+        //         <span class="black">	&#9733;</span> 
+        //     `
+        //     } else if (number == 3) {
+        //         return `
+        //         <span class="red">	&#9733;</span> 
+        //         <span class="red">	&#9733;</span> 
+        //         <span class="red">	&#9733;</span> 
+        //         <span class="black">	&#9733;</span> 
+        //         <span class="black">	&#9733;</span> 
+        //     `
+        //     }else if (number == 4) {
+        //         return `
+        //         <span class="red">	&#9733;</span> 
+        //         <span class="red">	&#9733;</span> 
+        //         <span class="red">	&#9733;</span> 
+        //         <span class="red">	&#9733;</span> 
+        //         <span class="black">	&#9733;</span> 
+        //     `
+        //     }else if (number == 5) {
+        //         return `
+        //         <span class="red">	&#9733;</span> 
+        //         <span class="red">	&#9733;</span> 
+        //         <span class="red">	&#9733;</span> 
+        //         <span class="red">	&#9733;</span> 
+        //         <span class="red">	&#9733;</span> 
+        //     `
+        //     }
+        //     else {
+        //         return `
+        //         <span class="black">	&#9733;</span> 
+        //         <span class="black">	&#9733;</span> 
+        //         <span class="black">	&#9733;</span> 
+        //         <span class="black">	&#9733;</span> 
+        //         <span class="black">	&#9733;</span> 
+        //     `
+        //     }
+
+
+        // }
+
+
+        // conditional -->
+        // condition ? true : false;
+        // (number >= 1 ? "red" : "black")
+
+
+        function getRating(number) {
+            return `
+                <span class="${(number >= 1 ? "red" : "black")}">	&#9733;</span> 
+                <span class="${(number >= 2 ? "red" : "black")}">	&#9733;</span> 
+                <span class="${(number >= 3 ? "red" : "black")}">	&#9733;</span> 
+                <span class="${(number >= 4 ? "red" : "black")}">	&#9733;</span> 
+                <span class="${(number >= 5 ? "red" : "black")}">	&#9733;</span> 
+            `
+        }
+
+        let ratingDiv = getRating(5)
+        document.write(ratingDiv)
+
+        document.write("<br><br>")
+
+        let ratingDiv2 = getRating(3)
+        document.write(ratingDiv2)
+
+        document.write("<br><br>")
+
+        let ratingDiv3 = getRating(1)
+        document.write(ratingDiv3)
+
+
+
+
+
+
+        function createAccount(firstname, age) {
+
+            if (firstname == "Sagar") {
+                return undefined
+            }
+
+            if (age < 18) {
+                return undefined
+            }
+
+            alert("Account Created")
+        }
+
+
+        let nn = createAccount("Sagar", 20);
+
+        // nn ? 
+
+
+
+    </script>
+</body>
+
+</html>

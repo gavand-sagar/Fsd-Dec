@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .red {
+            color: rgb(54, 54, 234);
+        }
+
+        .black {
+            color: rgb(138, 136, 136);
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        function getRating(number) {
+            return `
+                <span class="${(number >= 1 ? "red" : "black")}">	&#9733;</span> 
+                <span class="${(number >= 2 ? "red" : "black")}">	&#9733;</span> 
+                <span class="${(number >= 3 ? "red" : "black")}">	&#9733;</span> 
+                <span class="${(number >= 4 ? "red" : "black")}">	&#9733;</span> 
+                <span class="${(number >= 5 ? "red" : "black")}">	&#9733;</span> 
+            `
+        }
+
+        let list = [5, 1, 2, 1, 0, 2, 4, 4]
+
+
+        for(let item of list){
+            document.write(`<button>${getRating(item)}</button`)
+            document.write("<br>")
+        }
+
+    </script>
+</body>
+
+</html>
