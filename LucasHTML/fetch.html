@@ -7,38 +7,19 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container"></div>
+    <div class="output"></div>
     <script>
 
-        async function getUsers() {
-            let url = 'https://jsonplaceholder.typicode.com/posts/1';
-            try {
-                let res = await fetch(url);
-                return await res.json();
-            } catch (error) {
-                console.log(error);
-            }
+        let output = document.getElementById("output")
+
+        function getFact() {
+            fetch('https://catfact.ninja/fact')
+            .then(response => response.json())
+            .then(data => {
+                output.innerHTML = data
+            })
         }
-
-        async function renderUsers() {
-            let users = await getUsers();
-            let html = '';
-            users.forEach(user => {
-                let htmlSegment = `<div class="user">
-                                    <h2>${user.userId}</h2>
-                                    <h4>${user.id}</h4>
-                                    <div>${user.title}</div>
-                                    <div>${user.body}</div>
-                                </div>`;
-
-                html += htmlSegment;
-            });
-
-            let container = document.querySelector('.container');
-            container.innerHTML = html;
-        }
-
-        renderUsers();
+        
     </script>
 </body>
 </html>

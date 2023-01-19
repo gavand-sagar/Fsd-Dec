@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="output"></div>
+    <script>
+        let output = document.getElementById('output')
+        // fetch("https://catfact.ninja/fact")
+        //     .then(response => {
+        //         alert('A')
+        //     })
+
+        // alert('B')
+
+
+        // doShowAlertAfterThreeSecond("Sagar");
+
+        // doShowAlertAfterThreeSecond("Latha");
+
+        // doShowAlertAfterThreeSecond("Lucas");
+
+        // doShowAlertAfterThreeSecond("Ekta");
+
+
+        // function doShowAlertAfterThreeSecond(name){
+        //     setTimeout(() =>{
+        //         document.write(name)
+        //     },3000)
+        // }
+
+
+        // doShowAfterSomeSeconds("Sagar",2);
+
+        // doShowAfterSomeSeconds("Latha",1);
+
+        // doShowAfterSomeSeconds("Lucas",6);
+
+        // doShowAfterSomeSeconds("Ekta",4);
+
+
+        // function doShowAfterSomeSeconds(name,delay){
+        //     setTimeout(() =>{
+        //         document.write(name)
+        //     },delay * 1000)
+        // }
+
+        function choice1(){
+            output.innerHTML += "1st End"
+            output.innerHTML += "<br>"
+        }
+
+        function choice2(){
+            
+            output.innerHTML += "2nd End"
+            output.innerHTML += "<br>"
+        }
+        
+        doShowAfterSomeSeconds("1st Start", 1,choice1);// alert for done
+        
+        setTimeout(() => {
+            doShowAfterSomeSeconds("2nd Start", 3,choice2);// done in the document
+        }, 3000);
+        
+
+
+        function doShowAfterSomeSeconds(beforeText, delay,func) {
+            output.innerHTML += beforeText
+            output.innerHTML += "<br>"
+            setTimeout(() => {
+                func()
+            }, delay * 1000)
+            
+        }
+
+
+    </script>
+</body>
+
+</html>
