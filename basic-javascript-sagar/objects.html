@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        
+        //template for the objects 
+        class Person{
+            firstName;
+            age;            
+            profession; 
+            
+            Display(){
+                this.DisplayName()
+                document.write(this.profession)
+                document.write('<br>')
+                document.write(this.age)
+            }
+            
+            DisplayName(){
+                document.write(this.firstName)
+                document.write('<br>')
+            }
+        }
+
+
+        let s = new Person();  // constructor
+        s.firstName = "Sagar";
+        s.profession = "Trainer/Developer";
+        s.age = 32;
+
+        let m = new Person();
+        m.firstName = "Mike"
+        m.profession = "Developer"
+        m.age = 31
+
+        let r = new Person();
+        r.firstName = "Raj"
+        r.profession = "Developer"
+        r.age = 31
+
+        // document.write(s.firstName)
+        // document.write('<br>')
+        // document.write(s.profession)
+        // document.write('<br>')
+        // document.write(s.age)
+        
+        s.DisplayName()
+        document.write('<br><br>')
+        m.DisplayName();
+        document.write('<br><br>')
+        r.DisplayName();
+        
+        // document.write(m.firstName)
+        // document.write('<br>')
+        // document.write(m.profession)
+        // document.write('<br>')
+        // document.write(m.age)
+        
+       
+
+
+
+        class Product{
+            brand;
+            model
+            price;
+            imageUrl;
+            specScore;
+        }
+
+        let x = new Product();
+        x.brand = "Xiaomi"
+        x.model = "Redmi 40"
+        x.price = 22490;
+        x.specScore = 91;
+        x.imageUrl = "/"
+
+
+    </script>
+</body>
+
+</html>

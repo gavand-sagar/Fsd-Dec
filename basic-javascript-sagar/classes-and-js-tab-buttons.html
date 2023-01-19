@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button{
+            border:none;
+            padding:10px;
+            background-color: rgb(32, 32, 164);
+            color: white;
+        }
+        .active{
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <button id="homeButton" class="button" onclick="homeClick()">Home</button>
+    <button id="aboutButton" class="button" onclick="aboutClick()">About</button>
+    <button id="galleryButton" class="button" onclick="galleryClick()">Gallery</button>
+    <button id="contactButton" class="button" onclick="contactClick()">Contact Us</button>
+
+
+    <script>
+        let homeButton = document.getElementById('homeButton')
+        let aboutButton = document.getElementById('aboutButton')
+        let galleryButton = document.getElementById('galleryButton')
+        let contactButton = document.getElementById('contactButton')
+        
+        function homeClick(){
+            homeButton.classList.add('active')
+            aboutButton.classList.remove('active')   
+            galleryButton.classList.remove('active')   
+            contactButton.classList.remove('active')   
+        }
+
+        function aboutClick(){
+            homeButton.classList.remove('active')
+            aboutButton.classList.add('active')   
+            galleryButton.classList.remove('active')   
+            contactButton.classList.remove('active') 
+        }
+
+        function galleryClick(){
+            homeButton.classList.remove('active')
+            aboutButton.classList.remove('active')   
+            galleryButton.classList.add('active')   
+            contactButton.classList.remove('active') 
+        }
+
+        function contactClick(){
+            homeButton.classList.remove('active')
+            aboutButton.classList.remove('active')   
+            galleryButton.classList.remove('active')   
+            contactButton.classList.add('active') 
+        }
+
+    </script>
+</body>
+</html>
