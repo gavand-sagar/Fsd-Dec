@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input placeholder="heading" id="heading"> <br>
+    <input placeholder="author" id="author"><br>
+    <input placeholder="technology" id="technologyName"><br>
+    <input placeholder="content" id="content"><br>
+
+    <button onclick="addPost()">Add Post</button>
+
+    <hr>
+        <input id="input"> <button onclick="search()">Search</button>
+        <button onclick="showAll()">Show All</button>
+        <button onclick="sort()">Sort By heading</button>
+        <button onclick="sort()">Sort By heading</button>
+    <hr>
+
+        <div id="output"></div>
+    <hr>
+
+    <script>
+
+        let input = document.getElementById('input')
+        let output = document.getElementById('output')
+
+        class Post {
+            heading;
+            author;
+            technologyName;
+            date;
+            content;
+
+            Display() {
+                output.innerHTML += `
+                <div>
+                    <h2>${this.heading}</h2>
+                    <span>By</span>
+                    <span>${this.author}</span>|
+                    <span>${this.technologyName}</span>
+                    <p>${this.content}</p>
+                </div>
+                `
+            }
+
+            constructor(heading, author, technologyName, content) {
+                this.heading = heading;
+                this.author = author;
+                this.technologyName = technologyName;
+                this.content = content;
+
+            }
+        }
+
+
+        const postsList = [
+            new Post("Java eh?", "Homer Simpson", "Java", "Doh!"),
+            new Post("React", "Sagar", "Java", "Thank you!"),
+            new Post("Javascript", "Mike", "Java","Doh!"),
+            new Post("Apple", "Mike", "Java",  "Doh!"),
+            new Post("HTML", "Mike", "Java",  "Doh!")
+        ]
+
+
+        function showAll() {
+            for (const item of postsList) {
+                item.Display();
+            }
+        }
+
+        function sort() {
+            let sortedCollection = postsList.sort((a, b) => a.heading > b.heading ? -1 : 0);
+            for (const item of sortedCollection) {
+                item.Display();
+            }
+        }
+
+
+
+        function search() {
+            output.innerHTML = ""
+            for (const item of postsList) {
+                if (item.author == input.value) {
+                    item.Display();
+                }
+            }
+        }
+
+        function addPost()
+        {
+           let heading = document.getElementById("heading").value;
+            let author = document.getElementById("author").value;
+            let technologyName = document.getElementById("technologyName").value;
+             let content = document.getElementById("content").value;
+            let newPost = new Post(heading,author,technologyName,content);
+            postsList.push(newPost);
+            showAll();
+
+        }
+
+
+         function choice1(){
+            setInterval(()=>
+            output.innerHTML += "1st End"
+            output.innerHTML += "<br>"
+            );
+        }
+
+         function choice2(){
+            output.innerHTML += "2nd End"
+            output.innerHTML += "<br>"
+        }
+        
+        doShowAfterSomeSeconds("1st Start", 3, choice1);// alert for done
+        
+        doShowAfterSomeSeconds("2nd Start", 1, choice2);// done in the document
+
+
+        function doShowAfterSomeSeconds(beforeText, delay, func) {
+            output.innerHTML += beforeText
+            output.innerHTML += "<br>"
+            setTimeout( () => {
+               func()
+            }, delay * 1000)
+            
+        }
+
+    </script>
+</body>
+
+</html>

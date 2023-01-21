@@ -152,8 +152,44 @@
     </div>
 
     <script>
-        let list=['Javascript','React','HTML5','CSS3','Phyton','Redux','GraphQL','Java','All Posts']
-        list.forEach(item=> document.getElementById("menuBar").innerHTML+=(`<button type="button" class="${item == 'All Posts'?'purple-button':'pink-button'}">${item}</button>`));
+         class Post{
+            heading;
+            author;
+            technologyName;
+            date;
+            content;
+
+            Display(){
+                document.write(`<div class="sub-container">
+                    <h3>${this.heading}</h3>
+                    <p>by <span class="name">${this.author}</span> | <span class="course">${this.technologyName}</span> | ${this.date}</p>
+                    <p>${this.content}</p>
+                </div>`)
+            }
+
+            constructor(heading,author,technologyName,date,content){
+                this.heading = heading;
+                this.author = author;
+                this.technologyName = technologyName;
+                this.date = date;
+                this.content = content;    
+
+            }
+        }
+
+        let postList=[
+            {
+                heading:"This was funny",
+                author:"Homer Simpson",
+                technologyName:"Node.js",
+                date:"Posted on Thursday Nov 28th 2019",
+                content:"So, I saw this video in youtube and this guy was teaching something called \"Naht datt jee ESS\". I mean if you to teach French, do it properly!"
+            }
+        ]
+
+        
+        // let list=['Javascript','React','HTML5','CSS3','Phyton','Redux','GraphQL','Java','All Posts']
+        // list.forEach(item=> document.getElementById("menuBar").innerHTML+=(`<button type="button" class="${item == 'All Posts'?'purple-button':'pink-button'}">${item}</button>`));
         
         //for(let item of list)
         //{
