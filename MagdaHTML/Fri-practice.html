@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.header{
+    background-color:green;
+    border: 20px
+    margin-bottom:30px;
+    height: 50px;
+    position:sticky;
+   
+
+
+
+}
+
+.sidebar{
+    background-color:green;
+    border-radius:15px;
+    padding: 5px;
+    margin-left: 10px;
+    margin-top:15px;
+    height:80px;
+    width: 250px;
+    
+}
+.rightside{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    height:30px;
+    
+    
+    
+    
+
+}
+/* Pagination links */
+.pagination a {
+  color: black;
+  float:left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  margin-top: 50px;
+  
+}
+
+/* Style the active/current link */
+.pagination a.active {
+  background-color: green;
+  color: white;
+}
+
+/* Add a grey background color on mouse-over */
+.pagination a:hover:not(.active) {background-color: #ddd;}
+    </style>
+</head>
+<body>
+    <div class="header"></div>
+    <div><h1 class="rightside">Page 2</h1></div>
+    <div class="sidebar"></div>
+    <div class="sidebar"></div>
+    <div class="sidebar"></div>
+    <footer></footer>
+    
+    <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#">1</a>
+        <a class="active" href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">7</a>
+        <a href="#">8</a>
+        <a href="#">&raquo;</a>
+      </div>
+</body>
+</html>

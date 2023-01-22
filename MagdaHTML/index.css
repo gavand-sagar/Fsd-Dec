@@ -1,0 +1,173 @@
+html{
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    min-height: 100vh;
+    max-width:  1280px;
+    background-color: #ffffff;
+    margin:0 auto
+
+}
+body{
+    margin:0px !important;
+    background-color: white;
+    border: 1px solid #ddd;
+
+}
+.page-container{
+
+}
+.nav{
+
+}
+nav{
+    background-color: #222222;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+nav .logo{
+    display: flex;
+    align-items: center;
+
+
+}
+nav .logo img{
+    width: 56px;
+    height: 56px;
+    padding: 8px;
+    border-radius: 50%;
+}
+nav .logo .title{
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 20px;
+
+}
+nav ul{
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: flex-start;
+    list-style: none;
+
+}
+nav ul li:hover{
+    background-color: #222222;
+}
+nav ul li{
+    color:white;
+    padding:22px 40px;
+    background-color: #333333;
+
+}
+nav ul li.active{
+    background-color: #222222;
+}
+nav ul li a{
+    color:white;
+    text-decoration: none;
+    /*text-decoration->so it doesnt look llike a link anymore*/
+}
+/*tablets*/
+@media all and (max-width:800px){
+    nav{
+        justify-content: flex-start;
+    }
+
+}
+
+/*phone*/
+@media all and (max-width:600px){
+    nav{
+        flex-direction: column;
+        align-items: center; /*makes the logo centred!*/
+        
+
+    }
+    nav ul{
+        width:100%;
+        flex-direction: column;/*doesnt have to be, its up to me which look I prefer*/
+        align-items: stretch;/*to make sure it takes all available width!*/
+
+    }
+    nav ul li{
+        text-align: center;/* all menu is centred*/
+    }
+}
+
+.banner{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:500px;
+    background-image: url(https://i.picsum.photos/id/553/900/400.jpg?blur=5&hmac=oCmzn6CPclnMQBJQKFh_rXeZlgD0f5H-0RbSRT2C5SM);
+    background-size:cover;/*the image will take all the background cover*/
+    background-color: #333333;/* in case the image doesnt load up*/
+    text-align: center;
+
+}
+@keyframes appear{
+    from{
+        opacity: 0.0;
+        top: -100px;
+
+    }
+    to{
+        opacity: 1.0;
+        top:0.0;
+/*for it to work we have to set it to position relative, so .banner.heading position:relative*/
+    }
+}
+.banner .heading{
+    flex:1;
+    justify-self: center;
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    position:relative;
+    animation: appear 1s ease-in-out 0s forwards;
+    /*name duration timing-function delay iteretion-count direction-count direction fill-mode;*/
+}
+.banner .heading small{
+    font-size:24px;
+
+}
+.maintext{
+    font-size: 18px;
+    padding:12px;
+
+}
+.subtext{
+    display:flex;
+    
+}
+.subtext div{
+    padding:20px;
+    margin:10px;
+    border-radius:10px;
+    color: white;
+
+}
+.subtext.red{
+    background-color: firebrick;
+
+}
+.subtext .yellow{
+    background-color: yellow;
+
+}
+.subtext .green{
+    background-color: green;
+}
+.Footer{
+    position:absolute;/*we want it to be at the bottom always*/
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: #333333;
+    color:white;
+    text-align: center;
+    padding: 24px;
+}
+}

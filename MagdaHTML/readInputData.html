@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Clear{
+            background-color: white;
+            color:black;
+            border:30px
+    
+            
+        }
+        .Blue{
+            background-color: blue;
+            color:antiquewhite;
+            border: 30px;
+
+        }
+        .Red{
+            background-color: red;
+            color:white;
+            border: 30px;
+        }
+    </style>
+</head>
+<body>
+<input id="textbox">
+
+    <button onclick="AddRow()">Add Row</button>
+    <button onclick="AddBlueRow()">Add Blue Row</button>
+    <button onclick="AddRedRow()">Add Red Button</button>
+
+<div id="output"></div>
+
+<script>
+
+    let output=document.getElementById("output")
+    let textbox=document.getElementById("textbox")
+   
+
+    function addRow(){
+        let value=textbox.value;
+        output.innerHTML+=`<p class="Clear">${value}</p>`
+    }
+    function AddBlueRow(){
+        let value=textbox.value;
+        output.innerHTML+=`<p class="Blue">${value}</p>`
+    }
+        
+        function AddRedRow(){
+        let value=textbox.value;
+        output.innerHTML+=`<p class="Red">${value}</p>`
+        
+        }
+</script>
+</body>
+</html>
