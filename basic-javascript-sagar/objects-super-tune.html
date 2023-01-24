@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        class Song {
+            songName;
+            artistName;
+            rating;
+            imageURL;
+
+            getRatingDiv(value) {
+                return `<span></span><span></span><span></span><span></span>`
+            }
+
+            Display() {
+                document.write(`                
+                <div>
+                    <span><img src="${this.imageURL}"/></span>
+                    <span>${this.songName}</span>
+                    <span>${this.artistName}</span>
+                    <span>${this.getRatingDiv(this.rating)}</span>
+                </div>                
+                `)
+            }
+
+            DisplayNameAndArtist() {
+                document.write(`                
+                <div>
+                    <span>${this.songName}</span>
+                    <span>${this.artistName}</span>
+                </div>                
+                `)
+            }
+
+            constructor(s, a, r) {
+                this.songName = s;
+                this.artistName = a;
+                this.rating = r
+            }
+        }
+
+        let s1 = new Song("Vibe", "Cookiee");
+        s1.Display();
+
+
+        let s2 = new Song("Perfect", "Ed Sheeran", 5);
+        s2.Display();
+
+
+        // let z = {
+        //     songName: "songName",
+        //     artistName: "Ed Sheeran",
+        //     rating: 5
+        // }
+
+
+        let songsList = [
+            new Song("Vibe", "Cookiee",3),
+            new Song("Perfect", "Ed Sheeran", 2),
+            new Song("Perfect", "Ed Sheeran", 5),
+            new Song("Perfect", "Ed Sheeran", 1),
+            new Song("Perfect", "Ed Sheeran", 4),
+        ]
+
+
+        function sortByRating() {
+
+
+            let sortedCollection = songsList.sort((a, b) => a.rating > b.rating ? -1 : 0);
+            for (const item of sortedCollection) {
+                item.Display();
+            }
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>
