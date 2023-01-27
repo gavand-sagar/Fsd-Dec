@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout-setInterval</title>
+</head>
+<body>
+
+    <button onclick="magic()">Magic</button>
+    <progress max="100" value="0" id="loader">helo</progress>
+    <span id="output"></span>
+
+    <script>
+
+        let output = document.getElementById('output')
+        let loader = document.getElementById('loader')
+
+        let number = 0
+
+        let t;
+        
+        function magic(){
+
+            // output.innerHTML = "Before setTimeout"
+            // setTimeout(change,1000)//delay by 1secs/1000ms
+
+            // t = setInterval(change,1000)//execute in intervals of 1secs
+
+            t = setInterval(change, 100)
+
+        }
+
+        function change(){
+
+            // output.innerHTML = "This is after 1 secs"
+
+            // number = number - 1 //countdown
+            // output.innerHTML = number
+            // if(number == 0){
+            //     clearInterval(t)// stop interval
+            // }
+
+            number = number + 1
+            
+            loader.value = number
+            output.innerHTML = number + "%"
+            if(number == 100){
+                number = 0
+                loader.value = number
+                output.innerHTML = number + "%"
+                clearInterval(t)
+            }
+
+
+
+        }
+
+    </script>
+</body>
+</html>

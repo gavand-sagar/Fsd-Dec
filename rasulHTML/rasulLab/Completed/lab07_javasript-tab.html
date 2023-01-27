@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lab07 JavaScript tab</title>
+    <style>
+
+      :root{
+        --background-color: rgba(235, 235, 235, 255);
+      }
+
+      body {
+        box-sizing: border-box;
+        font-family: sans-serif;
+        font-size: 0;
+      }
+
+      .button {
+        font-size: 1.5rem;
+        border: 1px solid var(--background-color);
+        padding: 10px;
+        background-color: transparent;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        /* border-bottom: 0; */
+        cursor: pointer;
+      }
+
+      .x-space{
+        font-size: 12px;
+        width: 200px;
+        border-bottom: 1px solid var(--background-color);
+      }
+
+      .button:hover {
+        background-color: var(--background-color);
+      }
+
+      .active-button {
+        /* background-color: var(--background-color); */
+        border-bottom: 0;
+      }
+
+      main {
+        font-size: 16px;
+        padding: 10px;
+        /* border: 1px solid var(--background-color); */
+        border-radius: 3px;
+        height: 150px;
+        position: relative;
+        /* background-color: var(--background-color); */
+      }
+
+      p {
+        height: 0;
+        background-color: transparent;
+        overflow: hidden;
+        position: absolute;
+        top: 15;
+      }
+
+      .active-tab p {
+        height: fit-content;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <button id="homeButton" class="button" onclick="homeClick()">Home</button>
+      <button id="aboutButton" class="button" onclick="aboutClick()">
+        About
+      </button>
+      <button id="galleryButton" class="button" onclick="galleryClick()">
+        Gallery
+      </button>
+      <button id="contactButton" class="button" onclick="contactClick()">
+        Contact Us
+      </button>
+    </nav>
+
+    <main>
+      <div class="home" id="homeTab">
+        <p class="home-para">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Reprehenderit perspiciatis rerum reiciendis, iusto repellat sint
+          dolores exercitationem cumque sequi asperiores delectus in ad aliquam,
+          quo eius dolor dignissimos labore corporis placeat iste facere numquam
+          quae. Adipisci odit perspiciatis quia impedit amet, obcaecati, quidem
+          nostrum soluta repudiandae est minus quisquam magnam!
+        </p>
+      </div>
+      <div class="about" id="aboutTab">
+        <p class="about-para">
+          Ratione earum consectetur reprehenderit facere at voluptates natus
+          deleniti perspiciatis voluptatibus aperiam? Suscipit voluptas quo
+          ipsa, repellat pariatur quod fugiat! Laudantium quaerat corrupti atque
+          sequi officiis minima cum molestiae! Ducimus sunt necessitatibus
+          sapiente, molestias sint, pariatur atque similique fuga quidem quasi
+          rerum?
+        </p>
+      </div>
+      <div class="gallery" id="galleryTab">
+        <p class="gallery-para">
+          Minus culpa in ad, iure doloremque ipsa quod eveniet nihil libero,
+          soluta dolore ullam officia tempore impedit possimus expedita. Saepe
+          quam, nostrum iure, aspernatur natus fugiat veniam quaerat eaque,
+          doloremque hic maxime delectus alias rem! Id modi illum voluptas
+          veniam blanditiis ratione non! Quibusdam nihil, fugiat nulla earum
+          expedita illum voluptates reiciendis!
+        </p>
+      </div>
+      <div class="contact" id="contactTab">
+        <p class="contact-para">
+          Nulla, deserunt nam veniam vel hic non? Quod quos, veritatis deserunt
+          impedit expedita, laudantium est aliquam, temporibus corrupti dolore
+          similique unde voluptatem eligendi accusamus maiores dolor doloribus
+          blanditiis rerum iure inventore natus vitae! Alias voluptatibus
+          blanditiis qui ut illo voluptate sit asperiores natus vel, sapiente
+          porro odio odit et dolores voluptas repudiandae pariatur, reiciendis
+          magnam voluptatem modi obcaecati? Suscipit laborum itaque, ab natus
+          fuga illum!
+        </p>
+      </div>
+    </main>
+
+    <script>
+      let homeTab = document.getElementById("homeTab");
+      let aboutTab = document.getElementById("aboutTab");
+
+      let homeButton = document.getElementById("homeButton");
+      let aboutButton = document.getElementById("aboutButton");
+      let galleryButton = document.getElementById("galleryButton");
+      let contactButton = document.getElementById("contactButton");
+
+      homeButton.classList.add("active-button");
+      homeTab.classList.add("active-tab");
+
+      function homeClick() {
+        homeButton.classList.add("active-button");
+        aboutButton.classList.remove("active-button");
+        galleryButton.classList.remove("active-button");
+        contactButton.classList.remove("active-button");
+
+        homeTab.classList.add("active-tab");
+        aboutTab.classList.remove("active-tab");
+        galleryTab.classList.remove("active-tab");
+        contactTab.classList.remove("active-tab");
+      }
+
+      function aboutClick() {
+        homeButton.classList.remove("active-button");
+        aboutButton.classList.add("active-button");
+        galleryButton.classList.remove("active-button");
+        contactButton.classList.remove("active-button");
+
+        homeTab.classList.remove("active-tab");
+        aboutTab.classList.add("active-tab");
+        galleryTab.classList.remove("active-tab");
+        contactTab.classList.remove("active-tab");
+      }
+
+      function galleryClick() {
+        homeButton.classList.remove("active-button");
+        aboutButton.classList.remove("active-button");
+        galleryButton.classList.add("active-button");
+        contactButton.classList.remove("active-button");
+
+        homeTab.classList.remove("active-tab");
+        aboutTab.classList.remove("active-tab");
+        galleryTab.classList.add("active-tab");
+        contactTab.classList.remove("active-tab");
+      }
+      function contactClick() {
+        homeButton.classList.remove("active-button");
+        aboutButton.classList.remove("active-button");
+        galleryButton.classList.remove("active-button");
+        contactButton.classList.add("active-button");
+
+        homeTab.classList.remove("active-tab");
+        aboutTab.classList.remove("active-tab");
+        galleryTab.classList.remove("active-tab");
+        contactTab.classList.add("active-tab");
+      }
+    </script>
+  </body>
+</html>

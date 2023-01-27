@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab09_javascript-blogsite</title>
+    <style>
+
+        :root {
+            --main-color: #f4f4f5;
+            --theme-color: #16d18a;
+
+        }
+
+        body{
+            background-color: var(--main-color);
+            font-family: Arial;
+        }
+
+        div{
+            box-sizing: border-box;
+        }
+
+        .top-container{
+            background-color: var(--main-color);
+            padding: 25px;
+            border-bottom: var(--theme-color) solid;
+            border-width: 5px;
+            margin-bottom: 30px;
+            position: sticky;
+            top:0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+                        
+        }
+
+        .top-container .top-header{
+            font-size: xx-large;
+        }
+
+        .top-container button{
+            background:#010100;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 15px;
+            width: fit-content;
+            font-size: 16px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .top-container button:hover{
+            background:var(--theme-color);
+            color: #000;
+
+        }
+
+        .bottom-container{
+            display: flex;
+        }
+
+        #buttons{
+            width: 200px;
+            border-right: #e5e2e3 solid;
+            height: fit-content;
+            vertical-align: top;   
+        }
+
+        .bottom-container button{
+            background: linear-gradient(to top right, #a70c89,#f12c5c);
+            color: white;
+            border-radius: 20px;
+            margin: 5px;
+            margin-right: 8px;
+            padding: 10px;
+            border: 0;
+            cursor: pointer;
+            transition: .3s;
+
+        }
+
+        .bottom-container button:hover{
+            background: linear-gradient(to top right, #0f0ca7,#502cf1);
+        }
+
+        .bottom-container .button-allposts{
+            background: linear-gradient(to top right, #b233db,#4bb6f9);
+        }
+
+        .blogpost{
+            display: inline-block;
+        }
+
+        .post-container{
+            width: 650px;
+            background-color: white;
+            padding: 20px;
+            margin: 30px;
+            margin-top: 0px;
+            font-family: Arial;
+            display: block;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .stamp{
+            color: gray;
+        }
+
+        .name{
+            color: blue;
+        }
+
+        .post{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-container">
+        <div class="top-header"><b>TinyThoughts</b></div>
+        <div>
+            <button>Home</button>
+            <button>New Post</button>
+        </div>
+        <div class="signin-container">
+            <button>Signin</button>
+            <button>Signup</button>
+        </div>
+    </div>
+    <div class="bottom-container">
+        <div id="buttons"></div>
+
+
+        <div class="blogpost">
+            <div id="posts"></div>            
+        </div>
+    </div>
+
+    <script>
+
+        //sidebar buttons
+
+        let list = ["JavaScript", "React", "Node.js", "React Router",
+        "Redux", "GraphQL", "HTML5", "CSS3", "Java", "Python", "Movies", "All Posts"]
+
+        for (let item of list) {
+            
+            if (item == `All Posts`){
+                buttons.innerHTML += (`<button class="button-allposts">${item}</button>`)
+            }else {
+                buttons.innerHTML += (`<button class="button">${item}</button>`)
+            }
+        }
+        
+
+        //blog post
+
+        let posts = document.getElementById("posts")
+
+        class Post{
+            heading;
+            author;
+            technologyName;
+            date;
+            content;
+
+            Display(){
+                posts.innerHTML += `<div class="post-container">
+                    <h2>${this.heading}</h2>
+                    <div class="stamp"> by <span class="name">${this.author}</span> | <span class="name">${this.technologyName}</span> | Posted on ${this.date}</div>
+                    <p class="post">${this.content}</p>
+                </div>`            
+            }
+
+            constructor(heading,author,technologyName,date,content){
+                this.heading = heading;
+                this.author = author;
+                this.technologyName = technologyName;
+                this.date = date;
+                this.content = content;    
+
+            }
+        }
+
+        let blogPosts = [
+            new Post("This was funny", "Homer Simpson", "Node.js", "Thursday, November 28th 2019, 4:36:09 pm", `So, I saw this video on Youtube and this guy was teaching somethng called "Naahd Daaht Jee Esss". I mean, if you have to teach French, do it properly!`),
+            new Post("Java, eh?", "Homer Simpson", "Java", "Thursday, November 28th 2019, 4:34:43 pm", `Doh!`),
+            new Post("Why React??", "Homer Simpson", "React", "Thursday, November 28th 2019, 4:34:06 pm", `Why do you have to React to everything? I mean all i said was that the reactor was gonna blow. What's the fuss about?`),
+            new Post("Thoughts on JavaScript", "Homer Simpson", "JavaScript", "Thursday, November 28th 2019, 4:31:45 pm", `I love a hot cuppa Java with my donuts. Particularly when I'm reading the script for my new movie. Java and Script, mmmm, delicious!`),
+        ]
+        
+        for (const post of blogPosts) {
+
+            post.Display();
+            
+        }
+
+    </script>
+</body>
+</html>
