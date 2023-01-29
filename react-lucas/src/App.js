@@ -6,12 +6,16 @@ import BorderBox from './BorderBox';
 import Toggle from './Toggle';
 import Counter from './counter';
 import Accordion from './Accordion';
+import ChangeColorWhenClicked from './button_change_color'
+import RatingBox from './RatingBox'
 
 function App() {
   return (
     <div>
 
-      <Accordion heading="heading1" body="body1"></Accordion>
+      <ChangeColorWhenClicked></ChangeColorWhenClicked>
+
+      <RatingBox></RatingBox>
 
       {/* <Counter min={0} max={15}></Counter>
 

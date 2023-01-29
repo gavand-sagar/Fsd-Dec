@@ -63,3 +63,22 @@
 .rounded {
     border-radius: 5px;
 }
+
+.button {
+    border-radius: 5px;
+    background-color: rgb(31, 31, 30);
+    padding: 10px 20px;
+    border-color: #fff;
+    margin: 5px;
+    color: #fff;
+}
+
+.button.orange{
+    background-color: orange;
+}
+
+.wrapper {
+    padding: 10px;
+    background-color: rgb(200, 199, 198);
+    width: 300px;
+}
