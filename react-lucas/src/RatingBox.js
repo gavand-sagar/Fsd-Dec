@@ -1,17 +1,24 @@
 import { useState } from "react";
 import './Lucas.css';
 
-export default function ChangeColorWhenClicked(props){
+export default function RatingBox(props){
 
-    const [isActive, setIsActive] = useState(false);
+    const [isClicked, setClicked] = useState(false);
 
-    const buttonClick = () => {
-        // setIsActive(current => !current)
-        setIsActive(clicked => !clicked)
+    const getRating = ({number}) => {
+        return (<div class="wrapper">
+        <span class={`${number >= 1 ? "red" : "black"}`}>&#9733;</span>
+        <span class={`${number >= 2 ? "red" : "black"}`}>&#9733;</span>
+        <span class={`${number >= 3 ? "red" : "black"}`}>&#9733;</span>
+        <span class={`${number >= 4 ? "red" : "black"}`}>&#9733;</span>
+        <span class={`${number >= 5 ? "red" : "black"}`}>&#9733;</span>
+    </div>)
     }
 
-    return(<div class="wrapper">
-        <span></span>>
-    </div>)
+    return (<div>
+        <span>GetRating</span>
+        
+    </div>        
+    )
+    
 }
-

@@ -82,3 +82,11 @@
     background-color: rgb(200, 199, 198);
     width: 300px;
 }
+
+.red {
+    color: red;
+}
+
+.black {
+    color: rgb(107, 51, 51);
+}
