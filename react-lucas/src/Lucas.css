@@ -1,0 +1,65 @@
+.rounded_button {
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 15px;
+    border: none;
+}
+
+.square_button{
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: black;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.square_button.active{
+    background-color: orange;
+}
+
+.accordion_wrap {
+ border: #000 solid 1px;
+}
+
+.accordion_button {
+    margin: 10px;
+    padding: 10px;
+}
+
+.accordion_body {
+    font-size: 10px;
+    display: none;
+}
+
+.borderBox{
+    padding: 10px;
+    margin: 10px;
+}
+
+.borderBoxRoundedAndBorder{
+ border: #000 solid 1px;
+ font-size: 20px;
+ 
+}
+
+.normal{
+    width: 100px;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+}
+
+.border {
+    border: #000 solid 1px;
+    width: 100px;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+}
+
+.rounded {
+    border-radius: 5px;
+}
