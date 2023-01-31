@@ -1,13 +1,19 @@
 import "./App.css";
 // import RoundedButton from './RoundedButton.js';
-import SquaredButton from "./SquaredButton.js";
+// import SquaredButton from "./SquaredButton.js";
 // import Rating from './Rating.js';
 // import Accordion from './Accordion.js';
 // import BorderBox from "./BorderBox.js";
+import Counter from "./Counter.js";
 
 function App() {
   return (
     <div>
+      <Counter min={0} max={15} />
+      <br />
+      <br />
+      <Counter min={10} max={20} />
+
       {/* <BorderBox content="I am Ironman" />
       <BorderBox content="I am Ironman" border="true" />
       <BorderBox content="I am Ironman" border="true" rounded="true" /> */}
@@ -22,9 +28,9 @@ function App() {
       <Rating value="1"/>
       <Rating value="0"/> */}
 
-      <SquaredButton label="Home" active="true" />
+      {/* <SquaredButton label="Home" active="true" />
       <SquaredButton label="New Post" />
-      <SquaredButton label="New Post" />
+      <SquaredButton label="New Post" /> */}
 
       {/* <RoundedButton label="React"/>
       <RoundedButton label="JavaScript"/>

@@ -1,0 +1,25 @@
+button {
+    width: 80px;
+    height: 40px;
+    margin: 5px;
+    border: 1px black solid;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.black-button {
+    background: black;
+    color: white;
+
+}
+
+.black-button:hover, .orange-button:hover {
+    background: rgb(252, 215, 146);
+    color: black;
+}
+
+.orange-button {
+    background: orange;
+    color: black;
+}

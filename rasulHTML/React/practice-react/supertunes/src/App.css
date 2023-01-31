@@ -1,0 +1,76 @@
+:root {
+  --primary-color: #5e5e5e;
+  --secondary-color: #3a50ec;
+  --tertiary-color: #fafafa;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #dedede;
+  margin: 20px;
+}
+
+.mainContainer {
+  background-color: #ffffff;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+header {
+  margin-top: 30px;
+  color: var(--primary-color);
+}
+
+hr {
+  height: 2px;
+  background-color: var(--secondary-color);
+}
+
+.filter button {
+  margin: 30px 5px;
+  border: none;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter button:hover {
+  background-color: var(--tertiary-color);
+  color: var(--primary-color);
+}
+
+#listContainer {
+  display: block;
+  width: 100%;
+}
+
+.playList {
+  background-color: var(--tertiary-color);
+  margin: 15px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.playList img {
+  height: 75px;
+  width: 75px;
+}
+
+.playList .nameAndRating {
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stars {
+  color: #9465c9;
+}
