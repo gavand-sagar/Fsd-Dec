@@ -1,0 +1,149 @@
+
+/* for login */
+.login-main-wrapper {
+display: flex;
+justify-content: center;
+align-items: center;
+
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+}
+
+.login-wrapper {
+    box-shadow: -1px -1px 6px 3px rgba(0,0,0,0.45);
+    border-radius: 10px;
+    width: 400px ;
+    height: 300px;
+    text-align: center;
+    padding: 20px;
+}
+
+.login-button, .input-box {
+    width: 300px;
+    height: 50px;
+}
+
+#select-container {
+    width: 220px;
+}
+
+#add-button {
+    background-color: black;
+}
+
+/* for login1 */
+
+.login1-main-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(120,184,83,255);
+    
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    }
+
+.login1-wrapper {
+    box-shadow: -1px 0px 9px 0px rgba(0,0,0,0.75);;
+    width: 350px ;
+    height: 350px;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+}
+
+.login1-wrapper1 {
+    width: 100%;
+    display: block;
+    
+}
+
+#login1-button, .input1-box {
+    width: 300px;
+    height: 50px;
+}
+
+#login1-button {
+    background: rgba(76,176,80,255);
+    border-radius: 0;
+}
+
+.login1-text {
+    color: grey;
+}
+
+.login1-signin {
+    color: rgba(162,209,167,255) ;
+}
+
+/* for login2 */
+
+.login2-main-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    }
+
+.login2-wrapper {
+    box-shadow: -1px 0px 9px 0px rgba(0,0,0,0.75);;
+    width: 350px ;
+    height: 600px;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.login2-wrapper1 {
+    width: 350px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#login2-button, .input1-box {
+    width: 300px;
+    height: 50px;
+}
+
+#login2-button {
+    background: linear-gradient(to right,#29cbfe,#b622ff);
+    border-radius: 25px;
+}
+
+.login2-text {
+    color: grey;
+}
+
+.login2-signup:link {
+    text-decoration: none ;
+}
+
+.avatar {
+    width: 350px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#avatar {
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+}

@@ -1,17 +1,15 @@
 import "./App.css";
-import { useState } from "react";
+import Navbar from "./Navbar.js"
+import Rating from "./Rating.js"
 
 export default function App() {
-  const [active, setActive] = useState(false);
 
   return (
     <div>
-      <button className="black-button" onClick={() => setActive(true)}>
-        Home {active}
-      </button>
-      <button className="black-button" onClick={() => setActive(true)}>
-        New Post {active}
-      </button>
+      <Navbar />
+      <hr/>
+      <Rating />
+      <Rating />
     </div>
   );
 }

@@ -1,3 +1,5 @@
+
+/* for navbar */
 button {
     width: 80px;
     height: 40px;
@@ -22,4 +24,28 @@ button {
 .orange-button {
     background: orange;
     color: black;
+}
+
+/* for rating */
+.rating {
+    font-size: 50px;
+    padding: 15px;
+    margin: 8px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.purple-star {
+    color: #9465c9;
+}
+
+.gray-star {
+    color: gray;
+    transition: .3s;
+}
+
+.gray-star:hover, .purple-star:hover {
+    color: #a48bc0;
 }
