@@ -11,7 +11,7 @@ export default function Login() {
     const [passwordBox, setPasswordBox] = useState('');
 
     function login() {
-        if (usernameBox == "admin" && passwordBox == "123"){
+        if (usernameBox == "rasul" && passwordBox == "123"){
             localStorage.setItem('status', 'true')
             localStorage.setItem('user', usernameBox)
             navigate("/home")

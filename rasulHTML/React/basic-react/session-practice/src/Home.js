@@ -1,24 +1,23 @@
-import { useState } from "react"
-import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+
 import Header from "./Header";
-
-
+import MyDataContext from "./dataContext";
+import { useSelector } from "react-redux";
 export default function Home() {
+  const { someValue, setSomeValue } = useContext(MyDataContext);
+  const username = useSelector((x) => x.counter.username);
 
-    const navigate = useNavigate()
+  function change() {
+    setSomeValue("New value");
+  }
 
-    const [goTo, setGoTo] = useState('');
-
-    function go() {
-      navigate(goTo)
-    }
-    
-    return(
-        <div>
-            <Header/>
-            <h2>Home</h2>
-            <input value={goTo} onChange={e=>setGoTo(e.target.value)} type="text" placeholder="Type /(location)"/>
-            <button onClick={go}>Go!</button>
-        </div>
-    )
+  return (
+    <div>
+      <Header />
+      <button onClick={change}>Change</button>
+      <hr />( {someValue} ) coming from data useContext
+      <hr></hr>
+      {username} coming from redux
+    </div>
+  );
 }
