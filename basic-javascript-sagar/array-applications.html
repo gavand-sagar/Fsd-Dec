@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input id="inputBox">
+    <hr>
+    <button onclick="addNew()">Add New Item</button>
+    <button onclick="remove()">Remove</button>
+    <button onclick="removeLast()">Remove Last</button>
+    <hr>
+    <button onclick="showAll()">Show all</button>
+    <button onclick="showFirstHalf()">Show First Half</button>
+    <button onclick="showSecondHalf()">Show Second Half</button>
+    
+    <div id="output"></div>
+    
+    <script>
+        let output = document.getElementById("output")
+        let inputBox = document.getElementById("inputBox")
+
+        let list = ["apple","mango","grape"]
+
+        function showAll(){
+            output.innerHTML = list.join()
+        }
+
+        function addNew(){
+            //read value from textbox
+            let value = inputBox.value
+
+            // add it in list
+            list.push(value)
+            showAll()
+        }
+
+        function remove(){
+            //read value from textbox
+            let value = inputBox.value
+
+            let index = list.indexOf(value)
+
+            if(index > -1){
+                list.splice(index,1)
+            }else{
+                alert("Doesn't Exists")
+            }
+            showAll()
+        }
+
+        function removeLast(){
+            list.pop()
+            showAll()
+        }
+
+        function showFirstHalf(){
+            //
+
+            let start = 0
+            let end = list.length / 2
+
+            let half = list.slice(start,end)
+
+            output.innerHTML = half.join()
+
+            //
+        }
+
+        function showSecondHalf(){
+
+        }
+
+    </script>
+</body>
+</html>

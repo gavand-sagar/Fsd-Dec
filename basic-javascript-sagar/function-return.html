@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+
+        let output = document.getElementById('output')
+
+        let number = 9        
+        let number2 = Math.sqrt(number)
+        let cube = Math.pow(number,3)
+
+        // // Math.sqrt --> function 
+        // // number    --> parameter / argument
+
+
+        //alert(`Cube of ${number} is ${cube}`)
+        // number2 == 81
+        
+        
+        // function getMessage(theName){
+        //     return theName + " is a developer"
+        // }
+
+
+        // let yyy = getMessage()
+
+
+        //alert(message)
+              
+        output.innerHTML = createAccordion( "react", "It is Js an awesome Library.")
+
+
+        
+        
+
+        function createAccordion(heading,content){
+           let accordion = `
+            <div>
+                <h1>${heading}</h1>
+                <p>${content}</p>
+            </div>           
+            `
+            return accordion
+        }
+
+
+
+        
+       
+        // message = createAccordion("HTML", "It is use to create a structure ot webpage")
+        
+        // message = createAccordion("HTML", "It is use to create a structure ot webpage")
+
+    </script>
+</body>
+</html>
