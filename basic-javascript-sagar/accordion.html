@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {margin: 10px;}
+       .button {
+           background-color: rgb(231, 136, 194);
+           color: white;
+           width: 100px;
+           margin: 10px;
+           padding: 10px;
+           text-decoration: none;
+       }
+   </style>
+</head>
+<body>   
+    <h1>THIS IS ALREADY THERE</h1>    
+    
+    <script>
+        function addButton(text, link,id) {
+            let data = `<a class="button" id="${id}" href="${link}">${text}</a>`;
+            document.write(data);   
+        }
+        addButton("Home", "./home.html","b1");
+        addButton("Save", "./next.html","b2");
+
+        // function addParaWithHeading(heading,para){            
+        //     let data = `<h1>${heading}</h1><p>${para}</p>`;
+        //     document.write(data);
+        // }
+        // addParaWithHeading("apple","13 pro")
+        // addParaWithHeading("Samsung","Galaxy")
+        // addParaWithHeading("Samsung","Z")
+        // addParaWithHeading("Apple","14")
+    </script>
+</body>
+</html>

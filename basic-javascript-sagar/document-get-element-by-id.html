@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="e1">Heading</h1>
+    <p id="p1">Welcome</p>
+    <p id="p2">Welcome</p>
+
+    <button onclick="blueApple()">Change To Apple</button>
+    <button onclick="changeToBlue()">Change To Blue</button>
+    <button onclick="redSamsung()">Samsung</button>
+    <script>
+
+
+        let heading = document.getElementById('e1')
+        let paragraph = document.getElementById('p1')
+
+        function blueApple(){
+            doSomething()
+            changeToBlue()
+        }
+
+        function doSomething() {
+            heading.innerHTML = "Apple"
+        }
+
+        function changeToBlue() {
+            heading.style.backgroundColor = "blue"
+        }
+
+        function redSamsung(){
+            heading.innerHTML = "Samsung"
+            heading.style.backgroundColor = "red"
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

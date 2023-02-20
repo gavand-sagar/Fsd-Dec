@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <input id="textbox">
+    <button title="Add" onclick="addRow()">AddRow</button>
+    <div id="output"></div>
+
+    <script>
+        let textbox = document.getElementById('textbox')
+        let output = document.getElementById('output')
+
+        function addRow() {
+
+            if (textbox.value == "sagar") {
+                output.innerHTML += `<p class="red">${textbox.value}</p>`
+            } else {
+                output.innerHTML += `<p>${textbox.value}</p>`
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

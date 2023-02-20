@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input id="heading" placeholder="heading"> <br>
+    <input id="author" placeholder="author"><br>
+    <input id="technology" placeholder="technology"><br>
+    <input id="content" placeholder="content"><br>
+
+    <button onclick="addPost()">Add Post</button>
+
+    <hr>
+    <input id="input"> <button onclick="search()">Search</button>
+    <button onclick="showAll()">Show All</button>
+    <button onclick="sort()">Sort By heading</button>
+    <button onclick="sort()">Sort By heading</button>
+    <hr>
+
+    <div id="output"></div>
+    <hr>
+
+    <script>
+
+        let input = document.getElementById('input')
+        let heading = document.getElementById('heading')
+        let author = document.getElementById('author')
+        let technology = document.getElementById('technology')
+        let content = document.getElementById('content')
+        let output = document.getElementById('output')
+
+        class Post {
+            heading;
+            author;
+            technologyName;
+            date;
+            content;
+
+            Display() {
+                output.innerHTML += `
+                <div>
+                    <h2>${this.heading}</h2>
+                    <span>By</span>
+                    <span>${this.author}</span>|
+                    <span>${this.technologyName}</span>
+                    <p>${this.content}</p>
+                </div>
+                `
+            }
+
+            constructor(heading, author, technologyName, content) {
+                this.heading = heading;
+                this.author = author;
+                this.technologyName = technologyName;
+                this.content = content;
+
+            }
+        }
+
+
+        const postsList = [
+            new Post("Java eh?", "Homer Simpson", "Java", "Doh!"),
+            new Post("React", "Sagar", "Java", "Thank you!"),
+            new Post("Javascript", "Mike", "Java", "Doh!"),
+            new Post("Apple", "Mike", "Java", "Doh!"),
+            new Post("HTML", "Mike", "Java", "Doh!")
+        ]
+
+
+        function showAll() {
+            output.innerHTML = ""
+            for (const item of postsList) {
+                item.Display();
+            }
+        }
+
+        function sort() {
+            let sortedCollection = postsList.sort((a, b) => a.heading > b.heading ? -1 : 0);
+            for (const item of sortedCollection) {
+                item.Display();
+            }
+        }
+
+        function addPost() {
+            let newPost = new Post(heading.value, author.value, technology.value, content.value)
+            postsList.push(newPost)
+            showAll()
+        }
+
+        function search() {
+            output.innerHTML = ""
+            for (const item of postsList) {
+                if (item.author == input.value) {
+                    item.Display();
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>

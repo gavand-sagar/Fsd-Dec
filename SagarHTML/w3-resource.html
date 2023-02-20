@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --global-blue:rgb(61, 61, 179);
+        }
+
+        html{
+            font-family: arial;
+        }
+
+        body{
+            margin:0;
+            background: linear-gradient(to top,gray,lightgray);
+        }
+
+        div {
+            box-sizing: border-box;
+            vertical-align: top;
+        }
+
+        header {
+            color: aliceblue;
+            position: sticky;
+            top: 0;
+            height: 3rem;            
+            padding: 1rem;
+            background:  var(--global-blue);
+        }
+
+
+        .content {}
+
+        .content-panel {
+            background:linear-gradient(to top,aliceblue,white);
+            margin-top: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
+            box-shadow: 0 0 10px 5px gray;
+        }
+
+        .content-panel{
+            display:flex;
+            justify-content:center;
+            align-items: center;
+            padding:50px;
+            flex-wrap: wrap;
+        }
+
+        section{
+            border: 1px solid  var(--global-blue);
+            width:400px;      
+            height:250px;  
+            margin:20px;
+            box-shadow: 0 0 10px -6px;  
+        }
+
+        section>h4{
+            color: aliceblue;
+            padding:0.5rem;
+            margin:0;
+            background-color: var(--global-blue);
+        }
+
+        section>div{
+            padding: 10px;
+        }
+        section>div>span{
+            color: darkblue;
+            cursor: pointer;
+        }
+        section>div>span:hover{
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        This is heading
+    </header>
+    <div class="content">
+        <div class="content-panel">
+            <section>
+                <h4>HTML Exercises</h4>
+                <div>
+                    <span>item 1</span>
+                    <span>item 1</span>
+                    <span>item 1</span>
+                    <span>item 1</span>
+                    <span>item 1</span>
+                </div>
+            </section> 
+            
+            <section>
+                <h4>Css Exercises</h4>
+                <div>
+                    <span>item 1</span>
+                    <span>item 1</span>
+                    <span>item 1</span>
+                    <span>item 1</span>
+                    <span>item 1</span>
+                </div>
+            </section> 
+            
+        </div>
+    </div>
+
+</body>
+
+</html>

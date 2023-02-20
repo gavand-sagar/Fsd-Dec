@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button{
+            border:none;
+            padding:10px;
+            background-color: rgb(32, 32, 164);
+            color: white;
+        }
+        .active{
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <button id="homeButton" class="button" onclick="homeClick()">Home</button>
+    <button id="aboutButton" class="button" onclick="aboutClick()">About</button>
+    <button class="button">Gallery</button>
+    <button class="button">Contact Us</button>
+
+
+    <script>
+        let homeButton = document.getElementById('homeButton')
+        let aboutButton = document.getElementById('aboutButton')
+        
+        function homeClick(){
+            if(homeButton.classList.contains('active')){
+                homeButton.classList.remove('active')
+            }else{
+                homeButton.classList.add('active')
+            }            
+        }
+
+        function aboutClick(){
+            if(aboutButton.classList.contains('active')){
+                aboutButton.classList.remove('active')
+            }else{
+                aboutButton.classList.add('active')
+            }            
+        }
+
+    </script>
+</body>
+</html>

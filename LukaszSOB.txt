@@ -2,7 +2,12 @@ hi
 this is me
 and thats my car
 jbsdhj
+<<<<<<< HEAD
 
 iyiug
 what IS THIS
 hgfg
+=======
+jfbhhjb
+khdksj
+>>>>>>> main
