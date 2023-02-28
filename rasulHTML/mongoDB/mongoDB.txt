@@ -1,0 +1,3 @@
+mongodb+srv://admin:123@cluster0.tnwsmpe.mongodb.net/test
+
+npm i -g mongosh

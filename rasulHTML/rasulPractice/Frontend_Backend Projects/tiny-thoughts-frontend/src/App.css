@@ -1,0 +1,190 @@
+:root {
+  --main-color: #f4f4f5;
+  --theme-color: #16d18a;
+}
+
+body {
+  background-color: var(--main-color);
+  font-family: Arial;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.link:link {
+  text-decoration: none;
+}
+
+/* header */
+.top-container {
+  width: 100%;
+  background-color: var(--main-color);
+  padding: 25px;
+  border-bottom: var(--theme-color) solid;
+  border-width: 5px;
+  margin-bottom: 30px;
+  position: sticky;
+  top: 0px;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.navbar button {
+  background: #010100;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-right: 5px;
+}
+
+.navbar button:hover, #button-add:hover {
+  background: var(--theme-color);
+  color: #000;
+}
+
+/* bottom container */
+.bottom-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar-home, .sidebar-newpost {
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  width: 200px;
+  padding: 15px;
+}
+
+.sidebar-home {
+  height: fit-content;
+  border-right: 2px #e5e2e3 solid;
+}
+
+.sidebar-home button {
+  background: linear-gradient(to top right, #a70c89, #f12c5c);
+  color: white;
+  border-radius: 20px;
+  margin: 5px;
+  margin-right: 8px;
+  padding: 10px;
+  border: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar-home button:hover {
+  background: linear-gradient(to top right, #0f0ca7, #502cf1);
+}
+
+/* .bottom-container .button: active {
+  background: linear-gradient(to top right, #b233db, #4bb6f9);
+} */
+
+
+/* home */
+.blogpost {
+  display: inline-block;
+}
+
+.post-container {
+  background-color: white;
+  padding: 20px;
+  margin: 30px;
+  margin-top: 0px;
+  margin-right: 200px;
+  font-family: Arial;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.stamp {
+  color: gray;
+}
+
+.name {
+  color: blue;
+}
+
+.post {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* new post */
+
+.sidebar-newpost {
+  border-right: 2px black solid;
+  height: 560px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#button-add {
+  text-transform: capitalize;
+  background: #010100;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-left: 20px;
+}
+
+.title-container, .description-container, .char-count-container,.category-container {
+  width:600px ;
+  background-color: white;
+  border-radius: 8px;
+  padding:20px;
+  margin: 10px;
+  margin-top: 0px;
+  margin-left: 20px;
+  margin-right: 200px;
+}
+
+.char-count-container {
+  width: fit-content;
+  padding: 8px;
+}
+
+
+.login-main-wrapper {
+
+  position: absolute;
+  top: 40vh;
+
+  }
+  
+  .login-wrapper {
+      box-shadow: -1px -1px 6px 3px rgba(0,0,0,0.45);
+      border-radius: 10px;
+      width: 400px ;
+      height: 300px;
+      text-align: center;
+      padding: 20px;
+  }
+  
+  .login-button, .login-box {
+      width: 300px;
+      height: 50px;
+  }
+
+  .login-wrapper button{
+    background: #010100;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .login-wrapper button:hover{
+    background: var(--theme-color);
+    color: #000;
+  }

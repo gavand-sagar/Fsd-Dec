@@ -1,0 +1,52 @@
+[
+    {
+    "songName": "perfect",
+    "artist": "Ed Sheeran",
+    "rating": 5
+  },
+  {
+    "songName": "Shape of you",
+    "artist": "Ed Sheeran",
+    "rating": 4
+  },
+  {
+    "songName": "Despacito",
+    "artist": "Fonsi",
+    "rating": 3
+  },
+  {
+    "songName": "Baby",
+    "artist": "Justin Bieber",
+    "rating": 2
+  },
+  {
+    "songName": "Vibe",
+    "artist": "Charlie",
+    "rating": 1
+  },
+  {
+    "songName": "Bye! Bye! Bye!",
+    "artist": "n'sync",
+    "rating": 4
+  },
+  {
+    "songName": "STAY",
+    "artist": "Justin Bieber",
+    "rating": 3
+  },
+  {
+    "songName": "Yellow",
+    "artist": "Coldplay",
+    "rating": 4
+  },
+  {
+    "songName": "The Scientist",
+    "artist": "Coldplay",
+    "rating": 5
+  },
+  {
+    "songName": "Use Somebody",
+    "artist": "Kings of Leon",
+    "rating": 3
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "name": "tiny-thoughts-backend",
+  "version": "0.1.0",
+  "type": "module",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
+  },
+  "scripts": {
+    "start": "nodemon index.js react-scripts start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "description": "Tiny Thoughts Blog for knowledgeHut FSD",
+  "main": "index.js",
+  "author": "rasulhayat <rasul.hayat.90@gmail.com>",
+  "license": "ISC"
+}
