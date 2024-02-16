@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab05 Grid</title>
+    <script src="https://kit.fontawesome.com/2f0af7b763.js" crossorigin="anonymous"></script>
+    <style>
+        :root{
+            --nav-background: rgba(63,81,181,255);
+            --background: rgba(233,232,238,255);
+            --header-background: rgba(68,132,255,255);
+        }
+        body{
+            box-sizing: border-box;
+            font-family: arial;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            margin: 0;
+            background: var(--background);
+        }
+        header{
+            height: 10px;
+            background: var(--nav-background);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 20px;
+            box-shadow: 0px 0px 5px black;
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+        }
+        .w3-text{
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            color: white;
+            cursor: pointer;
+        }
+        .left-header-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 300px;
+        }
+        .patreon-button{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 30px;
+            width: 150px;
+            background: rgba(255,66,78,255);
+            cursor: pointer;
+            border: 0;
+        }
+        .patreon-button:hover{
+            background: rgb(216, 8, 8);
+        }
+        .share-button{
+            width: 40px;
+            height: 40px;
+            color: white;
+            background: transparent;
+            border: 0;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 50%;
+        }
+        .share-button:hover{
+            background: rgba(128, 128, 128, 0.199);
+        }
+        .w3-logo{
+            padding: 10px;
+            cursor: pointer;
+        }
+        .content-container{
+            padding: 20px;
+            margin: 10px;
+            margin-top: 0px;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            background-color: white;
+            box-shadow: 0 6px 10px 0 rgb(0 0 0 / 14%), 
+                        0 1px 18px 0 rgb(0 0 0 / 12%), 
+                        0 3px 5px -1px rgb(0 0 0 / 20%);
+        }
+        .content{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 15px;
+            background: white;
+        }
+        .content>section{
+            min-height: 200px;
+            width: 300px;
+            box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 
+                        0 3px 1px -2px rgb(0 0 0 / 20%), 
+                        0 1px 5px 0 rgb(0 0 0 / 12%);
+        }
+        .section-header{
+            background: var(--header-background);
+            color: white;
+            padding: 8px;
+        }
+        .section-content{
+            font-size: .8rem;
+            line-height: 25px;
+            padding: 16px;
+            width: 90%;
+        }
+        .section-content>a{
+            text-decoration: none;
+            color: var(--header-background);
+            margin-right: 5px;
+            transition: .3s;
+        }
+        .section-content>a:hover{
+            color: rgba(241,115,27,255) ;
+        }
+        .section-content>a:visited{
+            color: purple ;
+            word-spacing: 8px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <span class="w3-text">w3resource</span>
+        <span class="left-header-container">
+            <button class="patreon-button">
+                <span class="patreon-logo">
+                    <i class="fa-brands fa-patreon"></i>
+                </span>
+                <span class="patreon-text">Become a patron</span>
+            </button>
+            <button class="share-button">
+                <i class="fa-solid fa-share-nodes"></i>
+            </button>
+        </span>
+    </header>
+    <div class="w3-logo">
+        <img src="./images/grid/w3resource-logo.png" alt="w3-resource-logo">
+    </div>
+    <div class="content-container">
+        <div class="content">
+            <section>
+                <div class="section-header">Frontend tutorials</div>
+                <div class="section-content">
+                    <a href="https://www.w3resource.com/html/HTML-tutorials.php">HTML</a>
+                    <a href="https://www.w3resource.com/css/CSS-tutorials.php">CSS</a>
+                    <a href="https://www.w3resource.com/javascript/javascript.php">JavaScript</a>
+                    <a href="https://www.w3resource.com/html5/introduction.php">HTML5</a>
+                    <a href="https://www.w3resource.com/schema.org/introduction.php">Schema.org</a>
+                    <a href="https://www.w3resource.com/phpjs/use-php-functions-in-javascript.php">php.js</a>
+                    <a href="https://www.w3resource.com/twitter-bootstrap/tutorial.php">Twitter Bootstrap</a>
+                    <a href="https://www.w3resource.com/responsive-web-design/overview.php">Responsive Web Design tutorial</a>
+                    <a href="https://www.w3resource.com/zurb-foundation3/introduction.php">Zurb Foundation 3 tutorials</a>
+                    <a href="https://www.w3resource.com/pure/index.php">Pure CSS</a>
+                    <a href="https://www.w3resource.com/html5-canvas/index.php">HTML5 Canvas</a>
+                    <a href="https://www.w3resource.com/course/javascript-course.html" target="_blank">JavaScript Course</a>
+                    <a href="https://www.w3resource.com/icon/index.php">Icon</a>
+                    <a href="https://www.w3resource.com/angular/getting-started-with-angular.php">Angular</a>
+                    <a href="https://www.w3resource.com/vue/installation.php">Vue</a>
+                    <a href="https://www.w3resource.com/jest/introduction.php">Jest</a>
+                    <a href="https://www.w3resource.com/mocha/getting-started.php">Mocha</a>
+                    <a href="https://www.w3resource.com/npm/getting-started-with-npm.php">npm</a>
+                    <a href="https://www.w3resource.com/yarn/getting-started-with-yarn.php">Yarn</a>
+                    <a href="https://www.w3resource.com/cypress/cypress-overview.php">Cypress</a>
+                </div>
+            </section>
+            <section>
+                <div class="section-header">Backend tutorials</div>
+                <div class="section-content">
+                    <a href="https://www.w3resource.com/php/php-home.php">PHP</a>
+                    <a href="https://www.w3resource.com/python/python-tutorial.php">Python</a>
+                    <a href="https://www.w3resource.com/numpy/index.php">Python-NumPy</a>
+                    <a href="https://www.w3resource.com/pandas/index.php">Python-Pandas</a>
+                    <a href="https://www.w3resource.com/java-tutorial/index.php">Java</a>
+                    <a href="https://www.w3resource.com/node.js/node.js-tutorials.php">Node.js</a>
+                    <a href="https://www.w3resource.com/ruby/index.php">Ruby</a>
+                    <a href="https://www.w3resource.com/c-programming/programming-in-c.php">C programming</a>
+                    <a href="https://www.w3resource.com/php/composer/a-gentle-introduction-to-composer.php">Composer</a>
+                    <a href="https://www.w3resource.com/php/PHPUnit/a-gentle-introduction-to-unit-test-and-testing.php">PHPUnit</a>
+                    <a href="https://www.w3resource.com/laravel/laravel-tutorial.php">Laravel</a>
+                </div>
+            </section>
+            <section>
+                <div class="section-header">Database tutorials</div>
+                <div class="section-content">
+                    <a href="https://www.w3resource.com/sql/tutorials.php">SQL(2003 standard of ANSI)</a>
+                    <a href="https://www.w3resource.com/mysql/mysql-tutorials.php">MySQL</a>
+                    <a href="https://www.w3resource.com/PostgreSQL/tutorial.php">PostgreSQL</a>
+                    <a href="https://www.w3resource.com/sqlite/index.php">SQLite</a>
+                    <a href="https://www.w3resource.com/mongodb/nosql.php">NoSQL</a>
+                    <a href="https://www.w3resource.com/mongodb/nosql.php">MongoDB</a><a href="https://www.w3resource.com/oracle/index.php">Oracle</a>
+                    <a href="https://www.w3resource.com/redis/index.php">Redis</a>
+                    <a href="https://www.w3resource.com/apollo-graphql/the-apollo-graphql-platform.php">Apollo GraphQL</a>
+                </div>
+            </section>
+            <section>
+                <div class="section-header">Exercise with online editor</div>
+                <div class="section-content">
+                    <a href="https://www.w3resource.com/html-css-exercise/">HTML CSS</a>
+                    <a href="https://www.w3resource.com/javascript-exercises/">JavaScript</a>
+                    <a href="https://www.w3resource.com/jquery-exercises/">jQuery</a>
+                    <a href="https://www.w3resource.com/php-exercises/">PHP</a>
+                    <a href="https://www.w3resource.com/jquery-ui-exercises/">jQuery-UI</a>
+                    <a href="https://www.w3resource.com/coffeescript-exercises/">CoffeeScript</a>
+                    <a href="https://www.w3resource.com/python-exercises/">Python</a>
+                    <a href="https://www.w3resource.com/python-exercises/numpy/index.php">NumPy</a>
+                    <a href="https://www.w3resource.com/python-exercises/pandas/index.php">Pandas</a>
+                    <a href="https://www.w3resource.com/machine-learning/scikit-learn/iris/index.php">Machine Learning</a>
+                    <a href="https://www.w3resource.com/ruby-exercises/">Ruby</a>
+                    <a href="https://www.w3resource.com/cpp-exercises/index.php">C++ </a>
+                    <a href="https://www.w3resource.com/graphics/matplotlib/">Matplotlib</a>
+                    <a href="https://www.w3resource.com/c-programming-exercises/">C Programming</a>
+                    <a href="https://www.w3resource.com/csharp-exercises/">C# Sharp</a>
+                    <a href="https://www.w3resource.com/java-exercises/">Java</a>
+                    <a href="https://www.w3resource.com/scala-exercises/index.php">Scala</a>
+                    <a href="https://www.w3resource.com/swift-programming-exercises/">Swift</a>
+                    <a href="https://www.w3resource.com/r-programming-exercises/">R programming</a>
+                    <a href="https://www.w3resource.com/sql-exercises/">SQL</a>
+                    <a href="https://www.w3resource.com/oracle-exercises/">Oracle</a>
+                    <a href="https://www.w3resource.com/plsql-exercises/index.php">PL/SQL</a>
+                    <a href="https://www.w3resource.com/mysql-exercises/">MySQL</a>
+                    <a href="https://www.w3resource.com/sqlite-exercises/">SQLite</a>
+                    <a href="https://www.w3resource.com/postgresql-exercises/">PostgreSQL</a>
+                    <a href="https://www.w3resource.com/mongodb-exercises/">MongoDB</a>
+                    <a href="https://www.w3resource.com/twitter-bootstrap/examples.php">Twitter Bootstrap Examples</a>
+                </div>
+            </section>
+            <section>
+                <div class="section-header">Linux, Data interchange & API tutorials</div>
+                <div class="section-content">
+                    <a href="https://www.w3resource.com/linux-system-administration/installation.php">Linux Home</a>
+                    <a href="https://www.w3resource.com/linux-system-administration/linux-commands-introduction.php">Linux Commands</a>
+                    <a href="https://www.w3resource.com/linux-system-administration/installation.php">Linux Server Administration</a>
+                    <a href="https://www.w3resource.com/xml/xml.php">XML</a>
+                    <a href="https://www.w3resource.com/JSON/introduction.php">JSON</a>
+                    <a href="https://www.w3resource.com/ajax/introduction.php">Ajax</a>
+                    <a href="https://www.w3resource.com/API/google-plus/tutorial.php">Google Plus API</a>
+                    <a href="https://www.w3resource.com/API/youtube/tutorial.php">Youtube API</a>
+                    <a href="https://www.w3resource.com/API/google-maps/index.php">Google Maps API</a>
+                    <a href="https://www.w3resource.com/API/flickr/tutorial.php">Flickr API</a>
+                    <a href="https://www.w3resource.com/API/last.fm/tutorial.php">Last.fm API</a>
+                    <a href="https://www.w3resource.com/API/twitter-rest-api/">Twitter REST API</a>
+                </div>
+            </section>
+            <section>
+                <div class="section-header">Miscellaneous tutorials</div>
+                <div class="section-content">
+                    <a href="https://www.w3resource.com/projects/python/index.php">Python Projects</a>
+                    <a href="https://www.w3resource.com/excel/index.php">Excel Tutorial</a>
+                    <a href="https://www.w3resource.com/web-development-tools/firebug-tutorials.php">Firebug Tutorial</a>
+                    <a href="https://www.w3resource.com/web-development-tools/useful-web-development-tools.php">Useful Tools</a>
+                    <a href="https://www.w3resource.com/form-template/index.php">Google Docs Forms Template</a>
+                    <a href="https://www.w3resource.com/slides/index.php">Google Docs Slides Presentation</a>
+                    <a href="https://www.w3resource.com/convert/number/binary-to-decimal.php">Number Conversion</a>
+                    <a href="https://www.w3resource.com/quizzes/index.php">Quizzes</a>
+                    
+                    </div>
+            </section>
+        </div>
+    </div>
+    
+</body>
+</html>

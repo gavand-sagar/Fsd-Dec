@@ -1,0 +1,33 @@
+.my-button{
+  background: linear-gradient(to right top,purple,red);
+  border:none;
+  margin-right: 5px;
+  border-radius:15px;
+  padding: 5px;
+  color:white;
+}
+
+.square-button{
+  background-color: black;
+  color:white;
+  margin-right: 5px;
+  border-radius:3px;
+
+}
+
+.square-button.orange{
+  background-color: orangered;
+}
+
+.box{
+  margin: 10px;
+  padding:5px;
+}
+
+.border{
+  border:1px solid black;
+}
+
+.rounded{
+  border-radius: 10px;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input id="myName" type="text"><button onclick="showResult()">Show Result!</button>
+    <br>
+    <div id="output"></div>
+
+    <script>
+
+        // let firstName = "Sagar Gavand"
+        // let result = firstName.length
+        // document.write(result)
+
+
+        // let firstName = "Sgxgagr"
+        // //let length = lastName.length        
+        // let index = firstName.indexOf('g',1)
+        // let result = firstName.charAt(index + 1)
+
+        // document.write(result)
+
+
+        // let word = "Sagar"
+        // word.charAt(word.length-2) + word.charAt(word.length-1)
+
+        // let word = "Microprocessor"
+        // let result = word.substring(word.length - 5)
+        // document.write(result)
+
+        // let words = "34-56-2-3-4-5-63-4"
+        // let collection = words.split('-')
+        // let result = collection.length 
+        // document.write(result)
+
+
+        // let words = "apple-mango-banana-apple"
+        // let result = words.replaceAll("apple","grape")
+        // document.write(result)
+
+
+        let myName = document.getElementById("myName")
+
+        let firstLetter = myName.charAt(0)
+        let remainingLetters = myName.substring(1)
+        let result = firstLetter.toUpperCase() + remainingLetters.toLowerCase()
+
+        function showResult(){
+            output.innerHTML = `${result}`
+        }
+        
+
+    </script>
+</body>
+
+</html>

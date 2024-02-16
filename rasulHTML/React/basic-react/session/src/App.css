@@ -1,0 +1,59 @@
+.roundedButton {
+  border: none;
+  background: linear-gradient(to left top, purple, red);
+  border-radius: 20px;
+  margin: 5px;
+  padding: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.squaredButton {
+  border: none;
+  background: black;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+  color: white;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.active-button {
+  background: orange;
+  color: black;
+}
+
+.rating {
+  color: black;
+}
+
+.accordion {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+p {
+  height: 0;
+  overflow: hidden;
+  transition: .3s;
+}
+
+p.active-accordion {
+  height: 100px;
+}
+
+.borderBox {
+  margin: 5px;
+  padding: 5px;
+  width: fit-content;
+}
+
+.border {
+  border: solid 3px black;
+}
+
+.rounded {
+  border-radius: 10px;
+}

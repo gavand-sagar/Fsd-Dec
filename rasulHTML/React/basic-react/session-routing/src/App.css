@@ -1,0 +1,33 @@
+.login-main-wrapper {
+display: flex;
+justify-content: center;
+align-items: center;
+
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+}
+
+.login-wrapper {
+    box-shadow: -1px -1px 6px 3px rgba(0,0,0,0.45);
+    border-radius: 10px;
+    width: 400px ;
+    height: 300px;
+    text-align: center;
+    padding: 20px;
+}
+
+.login-button, .input-box {
+    width: 300px;
+    height: 50px;
+}
+
+#select-container {
+    width: 220px;
+}
+
+#add-button {
+    background-color: black;
+}

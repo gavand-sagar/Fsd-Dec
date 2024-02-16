@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch-cat fact</title>
+</head>
+<body>
+
+    <button onclick="getFact()">Get a cat random fact</button>
+    <div id="output"></div>
+    
+    <script>
+        
+        let output = document.getElementById('output')
+
+        function getFact(){
+
+            fetch('https://catfact.ninja/fact')
+                .then(s => s.json())
+                .then(data => {
+                    //actual code that needs to be performed after we get data
+                    output.innerHTML = data.fact
+                })
+        }
+
+
+    </script>
+</body>
+</html>

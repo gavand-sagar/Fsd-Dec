@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lab08_javascript-super-tunes</title>
+
+    <style>
+      /* * {
+            border: solid 1px red;
+        } */
+
+      :root {
+        --primary-color: #5e5e5e;
+        --secondary-color: #3a50ec;
+        --tertiary-color: #fafafa;
+      }
+
+      body {
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #dedede;
+        margin: 20px;
+      }
+
+      .mainContainer {
+        background-color: #ffffff;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 5px;
+      }
+
+      header {
+        margin-top: 30px;
+        color: var(--primary-color);
+      }
+
+      hr {
+        height: 2px;
+        background-color: var(--secondary-color);
+      }
+
+      .filter button {
+        margin: 30px 5px;
+        border: none;
+        background-color: var(--secondary-color);
+        color: white;
+        padding: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .filter button:hover {
+        background-color: var(--tertiary-color);
+        color: var(--primary-color);
+      }
+
+      #listContainer {
+        display: block;
+        width: 100%;
+      }
+
+      .playList {
+        background-color: var(--tertiary-color);
+        margin: 15px;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      .playList img {
+        height: 75px;
+        width: 75px;
+      }
+
+      .playList .nameAndRating {
+        width: 100%;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .stars {
+        color: #9465c9;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="mainContainer">
+      <header>
+        <h1>SuperTunes - Songs of the Week</h1>
+      </header>
+
+      <hr />
+
+      <div class="filter">
+        <button onclick="sortTitle()">Sort By Title</button>
+        <button onclick="sortRating()">Sort By Rating</button>
+      </div>
+
+      <div id="listContainer"></div>
+    </div>
+
+    <script>
+      let listContainer = document.getElementById("listContainer");
+
+      function getRating(rating) {
+        if (rating == 1) {
+          return `&#9733`;
+        } else if (rating == 2) {
+          return `&#9733&#9733`;
+        } else if (rating == 3) {
+          return `&#9733&#9733&#9733`;
+        } else if (rating == 4) {
+          return `&#9733&#9733&#9733&#9733`;
+        } else if (rating == 5) {
+          return `&#9733&#9733&#9733&#9733&#9733`;
+        } else {
+          return `undefined`;
+        }
+      }
+
+      class Song {
+        albumCover;
+        songName;
+        artistName;
+        rating;
+
+        Display() {
+          listContainer.innerHTML += `<div class="playList">
+                    <img src="${this.albumCover}" alt="${this.songName}">
+                    <div class="nameAndRating">
+                        <span>${this.songName} by ${this.artistName}</span>
+                        <span class="stars">${getRating(this.rating)}</span>
+                    </div>           
+                </div>`;
+        }
+
+        constructor(c, s, a, r) {
+          this.albumCover = c;
+          this.songName = s;
+          this.artistName = a;
+          this.rating = r;
+        }
+      }
+
+      let songsList = [
+        new Song("./images/super-tunes/s1.jpeg", "Vibe", "Cookiee Kawaii", 4),
+        new Song("./images/super-tunes/s2.png","death bed (feat. beabadoobee)","Powfu",3),
+        new Song("./images/super-tunes/s3.jpg","Moral of the Story","Ashe",5),
+        new Song("./images/super-tunes/s4.jpeg", "My Truck", "Breland", 2),
+        new Song("./images/super-tunes/s5.jpeg", "Pura Pura Lupa", "Mahen", 3),
+        new Song("./images/super-tunes/s6.png","WHATS POPPIN","Jack Harlow",4),
+        new Song("./images/super-tunes/s7.jpeg", "Apollo", "Smoove'L", 4),
+        new Song("./images/super-tunes/s8.jpeg","Carnaval Chegando","Rennan Da Penha",5),
+        new Song("./images/super-tunes/s9.jpg", "Psycho!", "Mase", 3),
+        new Song("./images/super-tunes/s10.png", "Any Song", "Zico", 4),
+      ];
+
+      for (const song of songsList) {
+        song.Display();
+      }
+
+      function clearPlayList() {
+        listContainer.innerHTML = "";
+      }
+
+      let titleOrder = true;
+      let ratingOrder = true;
+      let sortedTitle;
+      let sortedRating;
+
+      function sortTitle() {
+        clearPlayList();
+
+        if (titleOrder == true) {
+          sortedTitle = songsList.sort((a, b) =>
+            a.songName.toUpperCase() < b.songName.toUpperCase() ? -1 : 0
+          );
+          titleOrder = false;
+          ratingOrder = true;
+
+          for (const item of sortedTitle) {
+            item.Display();
+          }
+        } else {
+          sortedTitle = sortedTitle.reverse();
+
+          for (const item of sortedTitle) {
+            item.Display();
+          }
+        }
+      }
+
+      function sortRating() {
+        clearPlayList();
+
+        if (ratingOrder == true) {
+          sortedRating = songsList.sort((a, b) =>
+            a.rating < b.rating ? -1 : 0
+          );
+          ratingOrder = false;
+          titleOrder = true;
+
+          for (const item of sortedRating) {
+            item.Display();
+          }
+        } else {
+          sortedRating = sortedRating.reverse();
+
+          for (const item of sortedRating) {
+            item.Display();
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

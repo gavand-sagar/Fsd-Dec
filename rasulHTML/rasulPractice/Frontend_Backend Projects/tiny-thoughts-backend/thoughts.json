@@ -1,0 +1,26 @@
+[
+  {
+    "author": "Rasul",
+    "title": "This was funny",
+    "description": "So, I saw this video on Youtube and this guy was teaching somethng called 'Naahd Daaht Jee Esss'. I mean, if you have to teach French, do it properly!",
+    "category": "Node.js"
+  },
+  {
+    "author": "Rasul",
+    "title": "Java, eh?",
+    "description": "Doh!",
+    "category": "Java"
+  },
+  {
+    "author": "Rasul",
+    "title": "Why React??",
+    "description": "Why do you have to React to everything? I mean all i said was that the reactor was gonna blow. What's the fuss about?",
+    "category": "React"
+  },
+  {
+    "author": "Rasul",
+    "title": "Thoughts on JavaScript",
+    "description": "I love a hot cuppa Java with my donuts. Particularly when I'm reading the script for my new movie. Java and Script, mmmm, delicious!",
+    "category": "JavaScript"
+  }
+]
